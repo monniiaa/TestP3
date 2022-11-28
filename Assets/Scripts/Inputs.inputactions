@@ -1,0 +1,34 @@
+{
+    "name": "Inputs",
+    "maps": [
+        {
+            "name": "ScreenShot",
+            "id": "6d7b27d5-ba2c-4826-92e5-4ff61a4b4b12",
+            "actions": [
+                {
+                    "name": "TakeScreenShoot",
+                    "type": "Button",
+                    "id": "f3e54c04-662b-467d-b7fb-d05f572fb971",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "782ef113-b0c4-431d-a59d-011f77796404",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeScreenShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
