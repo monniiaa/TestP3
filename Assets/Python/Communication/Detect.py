@@ -1,12 +1,8 @@
 #First installing the teachable-machine
 from distutils.log import debug
-from teachable_machine import TeachableMachine
 import cv2
 import cvlib as cv
 import numpy as np
-import FaceDetector
-import math
-import sys
 from PIL import Image, ImageOps
 from keras.models import load_model
 
@@ -20,52 +16,6 @@ GENDER_MODEL = "weights/gender_net.caffemodel"
 GENDER_NET = cv2.dnn.readNet(GENDER_MODEL, GENDER_PROTO)
 GENDER_LIST = ["Male", "Female"]
 box_padding = 20
-
-def DetectClothes(img_path):
-#Importing my model as a Keras file
-    IMGPath = 'IMG-1108.jpg'
-    my_model = TeachableMachine(model_path='keras_model.h5', labels_file_path="labels.txt", model_type='h5')
-
-    result = my_model.classify_image(img_path)
-    print('highest_class_id:', result['highest_class_id'])
-    print('all_predictions:', result['all_predictions'])
-
-
-def DetectBottums(img_path):
-#Importing my model as a Keras file
-    np.set_printoptions(suppress=True)
-
-    model = load_model('pants_detection/pants_model.h5', compile=False)
-
-    # Load the labels
-    class_names = open('pants_detection/pants_labels.txt', 'r').readlines()
-    path= 'IMG-1088.jpg'
-    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-
-# Replace this with the path to your image
-    image = Image.open(path).convert('RGB')
-
-    size = (224, 224)
-    image = ImageOps.fit(image, size, Image.Resampling.LANCZOS)
-
-#turn the image into a numpy array
-    image_array = np.asarray(image)
-
-# Normalize the image
-    normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
-
-# Load the image into the array
-    data[0] = normalized_image_array
-
-# run the inference
-    prediction = model.predict(data)
-    index = np.argmax(prediction)
-    class_name = class_names[index]
-    confidence_score = prediction[0][index]
-
-    print('Class:', class_name, end='')
-    print('Confidence score:', confidence_score)
-
 
 def get_face_box (net, frame, conf_threshold = 0.7):
   frame_copy = frame.copy()
