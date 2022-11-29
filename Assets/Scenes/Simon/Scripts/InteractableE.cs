@@ -68,6 +68,16 @@ public class InteractableE : MonoBehaviour
         Debug.Log("You're not in range, ma friend");
         }
     }
+
+    public void SelfDestroyer()
+    {
+    Destroy(this.gameObject);
+    }
+
+    public void ESelfActivator()
+    {
+    this.gameObject.SetActive(true);
+    }
 }
 
 

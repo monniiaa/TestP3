@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectPickup : MonoBehaviour
 {
-
+    public bool pickedUp;
     public GameObject whatCanIPickup;
     public GameObject playerRightHand;
 
@@ -25,7 +25,18 @@ public class ObjectPickup : MonoBehaviour
     whatCanIPickup.transform.SetParent(playerRightHand.transform);
     whatCanIPickup.transform.localScale= new Vector3(2f, 2f, 2f);
     whatCanIPickup.transform.localPosition = new Vector3(0.19f, 0.15f, -0.28f);
+    pickedUp = true;
 
+    }
+
+    public void TrashObject()
+    {
+    if(pickedUp)
+        {
+        Destroy(whatCanIPickup);
+        Debug.Log("Destroyed");
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)

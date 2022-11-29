@@ -58,7 +58,15 @@ public class InteractableChecker : MonoBehaviour
         metroInRange = true;
         Debug.Log("Metro in range, ma friend");
         }
+    }   
 
+    public void SelfActivator()
+    {
+    this.gameObject.SetActive(true);
+    }
 
-}
+    public void SelfDeactivator()
+    {
+    this.gameObject.SetActive(false);
+    }
 }
