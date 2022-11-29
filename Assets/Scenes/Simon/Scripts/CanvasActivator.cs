@@ -5,6 +5,8 @@ using UnityEngine;
 public class CanvasActivator : MonoBehaviour
 {
     public GameObject interactionPanel;
+    public GameObject mobilUI;
+    public float mobilSamtaleTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,17 @@ public class CanvasActivator : MonoBehaviour
     {
         panel.SetActive(false);
 
+    }
+    public void MobilActivator()
+    {
+    mobilUI.SetActive(true);
+    StartCoroutine(MobilSamtaleTimer());
+    }
+
+    IEnumerator MobilSamtaleTimer()
+    {
+    yield return new WaitForSeconds(mobilSamtaleTimer);
+
+    mobilUI.SetActive(false);
     }
 }
