@@ -10,6 +10,7 @@ TagManager:
   - CinemachineTarget
   - Metro
   - PickableObject
+  - OpenAndClose
   layers:
   - Default
   - TransparentFX
