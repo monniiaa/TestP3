@@ -9,29 +9,15 @@ public class AvatarCostumization : MonoBehaviour
 
     public GameObject femalePrefab;
     public GameObject malePrefab;
-    // public ClothingItem top;
     public AvatarCustomization avatar;
 
     public Material hairMaterial;
     public Material skinMaterial;
     public Material shirtMaterial;
     public Material pantsMaterial;
-    public Slider BodyFat;
-    public Slider BodyMass;
-    public Slider BreastSize;
+
     public Button[] hairItem;
 
-    public void SetBodyFat()
-    {
-        avatar.BodyFat = BodyFat.value;
-        avatar.UpdateCustomization();
-    }
-
-    public void SetBodyMass()
-    {
-        avatar.BodyMuscle = BodyMass.value;
-        avatar.UpdateCustomization();
-    }
 
     public void SetHair(int index)
     {
@@ -48,27 +34,24 @@ public class AvatarCostumization : MonoBehaviour
         Debug.Log(AvatarData.RGBHairColor);
         //UpdateSkinColor(AvatarData.RGBSkinColor);
         //UpdateHairColor(AvatarData.RGBHairColor);
-        BodyFat.minValue = -50f;
-        BodyMass.minValue = -50f;
-        BodyFat.value = BodyFat.minValue;
-        BodyMass.value = BodyMass.minValue;
 
         avatar.UpdateClothing();
         hairMaterial.color = AvatarData.RGBHairColor;
         skinMaterial.color = AvatarData.RGBSkinColor;
         shirtMaterial.color = AvatarData.RGBShirtColor;
         pantsMaterial.color = AvatarData.RGBPantsColor;
+
+        Debug.Log(AvatarData.RGBHairColor);
+        Debug.Log(AvatarData.RGBSkinColor);
+        Debug.Log(AvatarData.RGBShirtColor);
         avatar.UpdateCustomization();
         CreatePrefab();
-        BodyFat.onValueChanged.AddListener(delegate { SetBodyFat(); });
-        BodyMass.onValueChanged.AddListener(delegate { SetBodyMass(); });
-
     }
 
 
    public void CreateAvatar(GameObject prefab)
     {
-        GameObject avatarInstance = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject avatarInstance = Instantiate(prefab, new Vector3(0.1f, 0.2f, -1), Quaternion.identity);
         avatar = avatarInstance.GetComponent<AvatarCustomization>();
         
     }

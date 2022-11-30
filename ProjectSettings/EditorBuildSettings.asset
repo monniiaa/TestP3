@@ -6,24 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sofie/MenuScene.unity
-    guid: 791c701b7aa67d943ac274d55b48bf83
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/MainMenu.unity
+    guid: 0010b548a04a34891bb8c596f01afb11
   - enabled: 1
-    path: Assets/Scenes/Sofie/CameraTestScene.unity
-    guid: 9c51625139225894f911d6385e12e434
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/FaceCamera.unity
+    guid: c45adc90336f940cd96aaea88cddfa88
+  - enabled: 1
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/BodyCamera.unity
+    guid: 60dad56038e644dde9fcb48d8c333fa9
   - enabled: 0
-    path: Assets/Scenes/Sofie/FaceDetectorScene.unity
-    guid: dc53129b9536b4047802944847361339
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/CustomAvatar.unity
+    guid: 31f67e547a61349ee9542e7245951da5
   - enabled: 1
-    path: Assets/Scenes/Sofie/ClothingScene.unity
-    guid: 6cc7085edcdb3614fa1f2f692ffcf8c7
-  - enabled: 1
-    path: Assets/Scenes/Sofie/CostumizeAvatar.unity
+    path: Assets/Changes (vores mapper)/Sofie/CostumAvatar.unity
     guid: 35eed538d830efb4bb3704f8aafae2b7
-  - enabled: 0
-    path: Assets/Scenes/Sofie/SofieSceneNixPille.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/Sofie/costum.unity
-    guid: 0eb07e729361fba4c98fac485a94dffc
   m_configObjects: {}

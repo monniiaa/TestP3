@@ -48,6 +48,7 @@ while True:
 
         if data[0] == "F":
             DataPath = data[9:29]
+            print(DataPath)
             image = DataPath
             gender = Detect.DetectGender(image)
             eyecolor = recognize_eyes_color.recognize_eyes_color(image)

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1822676, g: 0.22797328, b: 0.3073393, a: 1}
+  m_IndirectSpecularColor: {r: 0.18226787, g: 0.22797364, b: 0.30734006, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1169,6 +1169,7 @@ GameObject:
   - component: {fileID: 588258635}
   - component: {fileID: 588258634}
   - component: {fileID: 588258633}
+  - component: {fileID: 588258636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1242,6 +1243,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &588258636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588258632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1139653697
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,6 +5405,8 @@ GameObject:
   - component: {fileID: 8447235722728361872}
   - component: {fileID: 8447235722728361873}
   - component: {fileID: 8447235722728361874}
+  - component: {fileID: 8447235722728361875}
+  - component: {fileID: 8447235722728361876}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5393,7 +5429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8447235722728361870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb2d6f445f67d4e9d8589502c5cf84c5, type: 3}
   m_Name: 
@@ -5446,3 +5482,57 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8447235722728361875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447235722728361870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32aa623934da59e418c316262b187887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  femalePrefab: {fileID: 5157152841393684144, guid: eee884040085aef41af12107a169b4b6, type: 3}
+  malePrefab: {fileID: 521688597336732829, guid: 3fd60a02c92e11346a4bf28a8f151e31, type: 3}
+  avatar: {fileID: 0}
+  hairMaterial: {fileID: 2100000, guid: a1b56694271580a4c8cdf7b309ac7908, type: 2}
+  skinMaterial: {fileID: 2100000, guid: 649b6cfaca7e41647a679309bc2464db, type: 2}
+  shirtMaterial: {fileID: 2100000, guid: 8602c21f9ec66b848b558592e10b482f, type: 2}
+  pantsMaterial: {fileID: 2100000, guid: 0b493d6d4639a2c4f889f22cdaaced55, type: 2}
+  BodyFat: {fileID: 8447235722267229626}
+  BodyMass: {fileID: 8447235721463078578}
+  BreastSize: {fileID: 0}
+  hairItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &8447235722728361876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447235722728361870}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32aa623934da59e418c316262b187887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  femalePrefab: {fileID: 5157152841393684144, guid: eee884040085aef41af12107a169b4b6, type: 3}
+  malePrefab: {fileID: 521688597336732829, guid: 3fd60a02c92e11346a4bf28a8f151e31, type: 3}
+  avatar: {fileID: 0}
+  hairMaterial: {fileID: 2100000, guid: a1b56694271580a4c8cdf7b309ac7908, type: 2}
+  skinMaterial: {fileID: 2100000, guid: 649b6cfaca7e41647a679309bc2464db, type: 2}
+  shirtMaterial: {fileID: 2100000, guid: 8602c21f9ec66b848b558592e10b482f, type: 2}
+  pantsMaterial: {fileID: 2100000, guid: 0b493d6d4639a2c4f889f22cdaaced55, type: 2}
+  BodyFat: {fileID: 0}
+  BodyMass: {fileID: 0}
+  BreastSize: {fileID: 0}
+  hairItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

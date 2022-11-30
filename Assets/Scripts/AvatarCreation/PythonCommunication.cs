@@ -94,12 +94,14 @@ public class PythonCommunication : MonoBehaviour
                 if (data1[0] == 'R')
                 {
                     AvatarData.RGBSkinColor.r = float.Parse(skindata) / 255f;
+                    
                 } else if (data1[0] == 'G')
                 {
                     AvatarData.RGBSkinColor.g = float.Parse(skindata)/ 255f;
                 } else if (data1[0] == 'B')
                 {
                     AvatarData.RGBSkinColor.b = float.Parse(skindata)/ 255f;
+                    Debug.Log(AvatarData.RGBSkinColor);
                 }
                     break;
             case 'H':
@@ -116,6 +118,7 @@ public class PythonCommunication : MonoBehaviour
                 else if (data1[0] == 'B')
                 {
                     AvatarData.RGBHairColor.b = float.Parse(hairdata)/255f;
+                    Debug.Log(AvatarData.RGBHairColor);
                 }
                 break;
            default:

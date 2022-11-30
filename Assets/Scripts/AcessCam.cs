@@ -22,7 +22,9 @@ public class AcessCam : MonoBehaviour
     [SerializeField]
     string pythonPath;
     [SerializeField]
-    int sceneIndex;
+    string nextscenename;
+    public Timer timer;
+    bool hascaptured = false;
 
     private void Awake()
     {
@@ -51,14 +53,21 @@ public class AcessCam : MonoBehaviour
         if (imageType == ImageType.FaceImage && Input.GetKeyDown(KeyCode.Space))
         {
             TakeScreenShot(pythonPath, imageType);
-            
-        } else if (imageType == ImageType.ClothesImage && Input.GetKeyDown(KeyCode.Space))
+
+        }
+        else if (imageType == ImageType.ClothesImage && Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(ScreenshotTaker(10f));
+            timer.startCounter = true;
+
+        }
+        if (timer.currentTime <= 0 && hascaptured==false)
+        {
+            TakeScreenShot(pythonPath, imageType);
+            hascaptured = true;
         }
         if (loadingSlider.value >= 1)
         {
-            ManageScenes.LoadScene(sceneIndex);
+            ManageScenes.LoadScene(nextscenename);
         }
     }
 
@@ -76,6 +85,8 @@ public class AcessCam : MonoBehaviour
 
     public void Retry()
     {
+        timer.currentTime = 10;
+        hascaptured = false;
         backCam.Play();
     }
 
