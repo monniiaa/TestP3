@@ -1864,7 +1864,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2530136124247716660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: becf17e664e3f674aaf58f124706786c, type: 3}
   m_Controller: {fileID: 9100000, guid: 46bc40b1f3328114aa541722206866c6, type: 2}
   m_CullingMode: 1
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   FemaleBodyGEO: {fileID: 2253821421174838914}
   AvatarReferences: {fileID: 11400000, guid: 64fdaf6301ddadf4984fbd23b73c1671, type: 2}
   CurrentGender: 1
-  BodyFat: -82
+  BodyFat: -95.2
   BodyMuscle: 0
   BodyHeight: 1.5
   BreastSize: -100
