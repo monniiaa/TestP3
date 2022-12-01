@@ -440,7 +440,7 @@ namespace Sunbox.Avatars {
             UpdateBodyParameters_Internal();
 
             UpdateFace_Internal();
-            UpdateHair_Internal();
+            //UpdateHair_Internal();
 
 
 

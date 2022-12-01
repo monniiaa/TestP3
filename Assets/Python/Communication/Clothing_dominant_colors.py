@@ -5,15 +5,18 @@ def ShirtImage(img):
     image = cv2.imread(img)
     resized_image = cv2.resize(image, (300, 300)) 
     
-    shirtROI = resized_image[150:150+50, 130:130+35]
-    pantsROI = resized_image[240: 240+50, 120:120+30]
+    cv2.rectangle(resized_image, (120, 90), (120+50,90+45), (255,0,0), 3)
+    cv2.rectangle(resized_image, (125, 200), (125+40, 200+30), (255,0,0), 3)
+    
+    cv2.imshow("frame", resized_image)
+    cv2.waitKey(0)
 
-
+    shirtROI = resized_image[120:120+50, 90:90+45]
+    pantsROI = resized_image[125: 125+40, 190:190+30]
+    
     return shirtROI, pantsROI
 
 def dominantColors(image):
-    
-        
         #convert to rgb from bgr
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 
@@ -36,3 +39,6 @@ def dominantColors(image):
     return colors[0,0], colors[0,1], colors[0,2]
 
 
+img = "BodyShots/body0.png"
+
+ShirtImage(img)

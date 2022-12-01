@@ -3661,7 +3661,7 @@ MonoBehaviour:
   FemaleBodyGEO: {fileID: 2253821421174838914}
   AvatarReferences: {fileID: 11400000, guid: 64fdaf6301ddadf4984fbd23b73c1671, type: 2}
   CurrentGender: 1
-  BodyFat: -100
+  BodyFat: -82
   BodyMuscle: 0
   BodyHeight: 1.5
   BreastSize: -100
@@ -3682,7 +3682,7 @@ MonoBehaviour:
   ClothingItemHatVariationIndex: 0
   ClothingItemTop: {fileID: 11400000, guid: 4dff1c952c98f034c86d8762d6a38501, type: 2}
   ClothingItemTopVariationIndex: 1
-  ClothingItemBottom: {fileID: 11400000, guid: f4b65f6c6ef931b4c8ee27af64574193, type: 2}
+  ClothingItemBottom: {fileID: 11400000, guid: f571dc39c94943d4987dd465b5ce905f, type: 2}
   ClothingItemBottomVariationIndex: 0
   ClothingItemGlasses: {fileID: 11400000, guid: 75e434f18a59afc4ab2670613b653aef, type: 2}
   ClothingItemGlassesVariationIndex: 0
@@ -4181,7 +4181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5975265213587424811}
   m_LocalRotation: {x: 0.000000022351735, y: 9.3132224e-10, z: -0.000000001629814, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0005, y: 0.06, z: -0.032}
   m_LocalScale: {x: 1.3676375, y: 1.3676385, z: 1.3676374}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6106,8 +6106,8 @@ SkinnedMeshRenderer:
   - {fileID: 9161432374072248908}
   - {fileID: 5970634722716039374}
   m_BlendShapeWeights:
-  - 0
   - 100
+  - 0
   - 0
   - 100
   - 0
