@@ -26,6 +26,7 @@ namespace Week03
 
         void Start()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             // set movement direction, speed, size and initial position        
             direction = Random.insideUnitCircle.normalized;
             speed = Random.Range(minSpeed, maxSpeed);

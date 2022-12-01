@@ -52,7 +52,7 @@ namespace Week03
             WrapToScreen();
 
             // fire projectile
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 AsteroidsGame.Instance.SpawnProjectile();
             }
