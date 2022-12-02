@@ -11,6 +11,7 @@ TagManager:
   - Metro
   - PickableObject
   - NPC
+  - Roommate
   layers:
   - Default
   - TransparentFX
