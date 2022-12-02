@@ -1610,9 +1610,9 @@ SkinnedMeshRenderer:
   - 0
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+    m_Center: {x: 0.102135055, y: 0.7347051, z: -0.99898374}
+    m_Extent: {x: 0.18945867, y: 0.465534, z: 0.23849908}
+  m_DirtyAABB: 0
 --- !u!1 &2486666707346406868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   ClothingItemHatVariationIndex: 0
   ClothingItemTop: {fileID: 11400000, guid: 8246b73db22e13046806923906bd0224, type: 2}
   ClothingItemTopVariationIndex: 1
-  ClothingItemBottom: {fileID: 11400000, guid: abd6d76655b2a4cebb0449fc2535b2be, type: 2}
+  ClothingItemBottom: {fileID: 11400000, guid: f571dc39c94943d4987dd465b5ce905f, type: 2}
   ClothingItemBottomVariationIndex: 0
   ClothingItemGlasses: {fileID: 11400000, guid: 75e434f18a59afc4ab2670613b653aef, type: 2}
   ClothingItemGlassesVariationIndex: 0

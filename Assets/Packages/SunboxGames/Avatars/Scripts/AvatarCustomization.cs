@@ -219,7 +219,7 @@ namespace Sunbox.Avatars {
         void Start() {
             SetGender(CurrentGender, true);
             //UpdateCustomization();
-            UpdateClothing_Internal();
+            //UpdateClothing_Internal();
         }
 
         void Update() {
@@ -312,7 +312,7 @@ namespace Sunbox.Avatars {
             ClothingItemGlassesVariationIndex = ClothingItemGlasses == null || ClothingItemGlasses.Variations.Length == 1 ? 0 : UnityEngine.Random.Range(0, ClothingItemGlasses.Variations.Length);
             ClothingItemShoesVariationIndex = ClothingItemShoes == null || ClothingItemShoes.Variations.Length == 1 ? 0 : UnityEngine.Random.Range(0, ClothingItemShoes.Variations.Length);
 
-            UpdateClothing();
+            //UpdateClothing();
         }
         
         /// <summary>
@@ -452,7 +452,7 @@ namespace Sunbox.Avatars {
         /// Updates and invalidates clothing items on avatar.
         /// </summary>
         public void UpdateClothing() {
-            UpdateClothing_Internal();
+            //UpdateClothing_Internal();
         }
 
         /// <summary>

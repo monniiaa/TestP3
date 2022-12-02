@@ -10,6 +10,7 @@ TagManager:
   - CinemachineTarget
   - Metro
   - PickableObject
+  - NPC
   layers:
   - Default
   - TransparentFX

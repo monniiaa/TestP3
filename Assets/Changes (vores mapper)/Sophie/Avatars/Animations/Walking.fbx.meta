@@ -47,7 +47,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -567,14 +567,12 @@ ModelImporter:
     - name: mixamorig:Neck
       parentName: mixamorig:Spine2
       position: {x: -4.1474883e-12, y: 0.16865322, z: 5.7686385e-16}
-      rotation: {x: -0.0000000074505797, y: 0.0000000033308185, z: -0.0000000032574012,
-        w: 1}
+      rotation: {x: -0.0000000074505797, y: 0.0000000033308185, z: -0.0000000032574012, w: 1}
       scale: {x: 1, y: 1.0000001, z: 0.99999994}
     - name: mixamorig:Head
       parentName: mixamorig:Neck
       position: {x: 0.0000000010756748, y: 0.09341923, z: 0.028410409}
-      rotation: {x: 0.0000000074505797, y: -0.0000000017538082, z: 0.0000000023509386,
-        w: 1}
+      rotation: {x: 0.0000000074505797, y: -0.0000000017538082, z: 0.0000000023509386, w: 1}
       scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
     - name: mixamorig:HeadTop_End
       parentName: mixamorig:Head
@@ -599,8 +597,7 @@ ModelImporter:
     - name: mixamorig:RightHand
       parentName: mixamorig:RightForeArm
       position: {x: -0.00000022858599, y: 0.2832884, z: 0.000000044725386}
-      rotation: {x: 0.000000039115545, y: 0.000000087311484, z: -0.0000000574073,
-        w: 1}
+      rotation: {x: 0.000000039115545, y: 0.000000087311484, z: -0.0000000574073, w: 1}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: mixamorig:RightHandThumb1
       parentName: mixamorig:RightHand
@@ -775,8 +772,7 @@ ModelImporter:
     - name: mixamorig:LeftHandMiddle3
       parentName: mixamorig:LeftHandMiddle2
       position: {x: 2.870735e-14, y: 0.0295, z: -1.8927175e-16}
-      rotation: {x: -0.00000036135398, y: -0.000000034227302, z: -0.000020747428,
-        w: 1}
+      rotation: {x: -0.00000036135398, y: -0.000000034227302, z: -0.000020747428, w: 1}
       scale: {x: 1, y: 1, z: 1.0000002}
     - name: mixamorig:LeftHandMiddle4
       parentName: mixamorig:LeftHandMiddle3
@@ -791,14 +787,12 @@ ModelImporter:
     - name: mixamorig:LeftHandRing2
       parentName: mixamorig:LeftHandRing1
       position: {x: 3.8807003e-17, y: 0.0315, z: -1.2637012e-16}
-      rotation: {x: -0.000000052153602, y: -0.00000006682267, z: 0.00000006558557,
-        w: 1}
+      rotation: {x: -0.000000052153602, y: -0.00000006682267, z: 0.00000006558557, w: 1}
       scale: {x: 1, y: 1, z: 1.0000002}
     - name: mixamorig:LeftHandRing3
       parentName: mixamorig:LeftHandRing2
       position: {x: -0.000000026432891, y: 0.0295, z: 0.0000000052098597}
-      rotation: {x: 0.000000052153602, y: 0.00000006682267, z: -0.00000006558552,
-        w: 1}
+      rotation: {x: 0.000000052153602, y: 0.00000006682267, z: -0.00000006558552, w: 1}
       scale: {x: 1.0000001, y: 1.0000004, z: 1.0000005}
     - name: mixamorig:LeftHandRing4
       parentName: mixamorig:LeftHandRing3

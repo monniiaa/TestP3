@@ -486,7 +486,7 @@ MonoBehaviour:
   ClothingItemHatVariationIndex: 0
   ClothingItemTop: {fileID: 11400000, guid: 8246b73db22e13046806923906bd0224, type: 2}
   ClothingItemTopVariationIndex: 1
-  ClothingItemBottom: {fileID: 11400000, guid: abd6d76655b2a4cebb0449fc2535b2be, type: 2}
+  ClothingItemBottom: {fileID: 11400000, guid: f571dc39c94943d4987dd465b5ce905f, type: 2}
   ClothingItemBottomVariationIndex: 0
   ClothingItemGlasses: {fileID: 11400000, guid: 75e434f18a59afc4ab2670613b653aef, type: 2}
   ClothingItemGlassesVariationIndex: 0
