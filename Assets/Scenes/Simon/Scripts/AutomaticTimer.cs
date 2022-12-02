@@ -7,7 +7,12 @@ public class AutomaticTimer : MonoBehaviour
     public float timeRemaining;
     public bool timeStarter;
     public GameObject tavleInteractableChecker;
+    public AudioManager audioManager;
   
+    void Start()
+    {
+        audioManager = AudioManager.instance;
+    }
     void Update() 
     {
         if(timeStarter)
@@ -21,6 +26,7 @@ public class AutomaticTimer : MonoBehaviour
         if(timeRemaining <= 0)
         {
         tavleInteractableChecker.SetActive(true);
+        audioManager.PlaySound(6, audioManager.narratorSource); 
         }
     }
 

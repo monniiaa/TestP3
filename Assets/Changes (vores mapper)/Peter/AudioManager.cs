@@ -38,87 +38,87 @@ public class AudioManager : MonoBehaviour
             sound.source.loop = sound.loop;
         }*/
     }
-
+    public void PlayWithDelay(int soundnumber, AudioSource source)
+    {
+        source.clip = audioclips[soundnumber];
+        source.PlayDelayed(4);
+    }
+    public void PlaySound(int soundnumber, AudioSource source)
+    {
+        source.PlayOneShot(audioclips[soundnumber]);
+    }
     void Start()
     {
         //PlayWithDelay(0, narratorSource); 
-        StartCoroutine(PlayAudioSequentially());   
+        StartCoroutine(PlayAudioSequentially());
     }
     public void StairSound()
     {
-       StartCoroutine(PlayStairAudio());
+        StartCoroutine(PlayStairAudio());
     }
-    
+
     IEnumerator PlayAudioSequentially()
     {
-    yield return null;
+        yield return null;
 
-    //1.Loop through each AudioClip
-    for (int i = 0; i < 3; i++)
-    {
-        //2.Assign current AudioClip to audiosource
-        narratorSource.clip = audioclips[i];
-
-        //3.Play Audio
-        narratorSource.Play();
-
-        //4.Wait for it to finish playing
-        while (narratorSource.isPlaying)
+        //1.Loop through each AudioClip
+        for (int i = 0; i < 3; i++)
         {
-            yield return null;
-        }
+            //2.Assign current AudioClip to audiosource
+            narratorSource.clip = audioclips[i];
 
-        //5. Go back to #2 and play the next audio in the adClips array
-    }
+            //3.Play Audio
+            narratorSource.Play();
+
+            //4.Wait for it to finish playing
+            while (narratorSource.isPlaying)
+            {
+                yield return null;
+            }
+
+            //5. Go back to #2 and play the next audio in the adClips array
+        }
     }
 
     IEnumerator PlayStairAudio()
     {
-    yield return null;
+        yield return null;
 
-    //1.Loop through each AudioClip
-    for (int i = 3; i < 5; i++)
-    {
-        //2.Assign current AudioClip to audiosource
-        narratorSource.clip = audioclips[i];
-
-        //3.Play Audio
-        narratorSource.Play();
-
-        //4.Wait for it to finish playing
-        while (narratorSource.isPlaying)
+        //1.Loop through each AudioClip
+        for (int i = 3; i < 4; i++)
         {
-            yield return null;
+            //2.Assign current AudioClip to audiosource
+            narratorSource.clip = audioclips[i];
+
+            //3.Play Audio
+            narratorSource.Play();
+
+            //4.Wait for it to finish playing
+            while (narratorSource.isPlaying)
+            {
+                yield return null;
+            }
+
+            //5. Go back to #2 and play the next audio in the adClips array
         }
 
-        //5. Go back to #2 and play the next audio in the adClips array
-    }
+
+       
 
 
-     void PlaySound(int soundnumber, AudioSource source)
-    {
-        source.PlayOneShot(audioclips[soundnumber]);
-    }
-    void PlayWithDelay(int soundnumber, AudioSource source)
-    {
-        source.clip = audioclips[soundnumber];
-        source.PlayDelayed(4);
-        source.clip = audioclips[soundnumber];
-        source.clip = audioclips[soundnumber];
-    }
-    /*public void Play(string name)
-    {
-        Sound snd = Array.Find(sounds, sound => sound.name == name);
-        try
+        /*public void Play(string name)
         {
-            snd.source.Play();
-        }
-        catch (Exception exception)
-        {
-            Debug.LogWarning("sound not found");
-        }
-    
-        
-    }*/
+            Sound snd = Array.Find(sounds, sound => sound.name == name);
+            try
+            {
+                snd.source.Play();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning("sound not found");
+            }
+
+
+        }*/
     }
-}
+    }
