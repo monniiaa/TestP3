@@ -9,12 +9,13 @@ public class AvatarTimer : MonoBehaviour
     CharacterController controller;
     Animator avatarAnimator;
     PlayerInput playerInput;
-
+    public GameObject instructions;
     
     public bool controllerEnabled;
 
     void Start() 
     {
+        instructions.SetActive(true);
         controller = GetComponent<CharacterController>();   
         avatarAnimator = GetComponent<Animator>();
         playerInput = GetComponent <PlayerInput>();
@@ -30,6 +31,7 @@ public class AvatarTimer : MonoBehaviour
         {
             if(!controllerEnabled)
             {
+                instructions.SetActive(false);
             controller.enabled = true;
             avatarAnimator.enabled = true;
             playerInput.enabled = true;

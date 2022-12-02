@@ -35,7 +35,8 @@ public class ControllerDisable : MonoBehaviour
 
     public void FullControlDisable()
     {
-    controller.enabled = false;
+        controller.enabled = false;
+        playerInput.enabled = false;
     }
 
     IEnumerator ControllerShortEnable()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,8 +11,20 @@ public class MenuManager : MonoBehaviour
     public GameObject avatarPanel;
     public GameObject settingsPanel;
 
-    public Animator transition;
-    public float transitionTime = 5f;
+    public Button avatar, scenarier, indstillinger, lavEnAvatar, scenarie1, scenarie2;
+
+    // public Animator transition;
+    // public float transitionTime = 5f;
+
+    void Start()
+    {
+        avatar.onClick.AddListener(delegate { ChangePanel("avatar"); });
+        scenarier.onClick.AddListener(delegate { ChangePanel("scenarier"); });
+        indstillinger.onClick.AddListener(delegate { ChangePanel("indstillinger"); });
+        lavEnAvatar.onClick.AddListener(delegate { ChangePanel("lavEnAvatar"); });
+        scenarie1.onClick.AddListener(delegate { ChangePanel("scenarie1"); });
+        scenarie2.onClick.AddListener(delegate { ChangePanel("scenarie2"); });
+    }
 
     public void DisablePanels()
     {
@@ -21,25 +34,41 @@ public class MenuManager : MonoBehaviour
         settingsPanel.SetActive(false);
     }
 
-    public void AvatarPanel()
+    public void ChangePanel(string panelName)
     {
-        DisablePanels();
-        avatarPanel.SetActive(true);
+        switch (panelName)
+        {
+            case "avatar":
+                DisablePanels();
+                avatarPanel.SetActive(true);
+                break;
+            case "scenarier":
+                DisablePanels();
+                scenariosPanel.SetActive(true);
+                break;
+            case "indstillinger":
+                DisablePanels();
+                settingsPanel.SetActive(true);
+                break;
+            case "lavEnAvatar":
+                DisablePanels();
+                ChangeScene("FaceCamera");
+                break;
+            case "scenarie1":
+                DisablePanels();
+                ChangeScene("Sims Train Scene");
+                break;
+            case "scenarie2":
+                DisablePanels();
+                ChangeScene("House scene");
+                break;
+            default:
+                Debug.Log("fejl i panels, buttons eller switch statements");
+                break;
+        }
     }
 
-    public void ScenariosPanel()
-    {
-        DisablePanels();
-        scenariosPanel.SetActive(true);
-    }
-
-    public void SettingsPanel()
-    {
-        DisablePanels();
-        settingsPanel.SetActive(true);
-    }
-
-    public void MainMenuPanel()
+    public void BackButton()
     {
         DisablePanels();
         mainMenuPanel.SetActive(true);
@@ -47,17 +76,17 @@ public class MenuManager : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        StartCoroutine(SceneTransition());
+        // StartCoroutine(SceneTransition());
 
         SceneManager.LoadScene(sceneName);
     }
 
-    IEnumerator SceneTransition()
+    /* IEnumerator SceneTransition()
     {
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
-    }
+    } */
 
     public void ExitGame()
     {

@@ -78,6 +78,11 @@ public class InteractableE : MonoBehaviour
     {
     this.gameObject.SetActive(true);
     }
+
+    public void DestroyObject(GameObject button)
+    {
+        Destroy(button);
+    }
 }
 
 

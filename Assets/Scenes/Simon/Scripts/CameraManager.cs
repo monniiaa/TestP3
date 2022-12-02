@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class CameraManager : MonoBehaviour
 {
@@ -12,13 +14,11 @@ public class CameraManager : MonoBehaviour
     public float trainCameraSwitchTime;
     public float posterCameraSwitchTime;
     public float svarUISwitchTime;
+    public StarterAssetsInputs input;
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -66,6 +66,11 @@ public class CameraManager : MonoBehaviour
         yield return new WaitForSeconds(svarUISwitchTime);
 
         svarUI.SetActive(true);
+        input.cursorLocked = false;
+        input.cursorInputForLook = false;
+        Cursor.lockState = CursorLockMode.None;
+        //input.SetCursorVisible(false);
+        
     }
 
 
