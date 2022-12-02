@@ -8,6 +8,8 @@ public class OpenClose : MonoBehaviour
 {
     [SerializeField]
     private GameObject translateObject;
+    public GameObject controlDoor;
+    public GameObject controlFood;
     private bool _isOpen = false;
     [SerializeField]
     private bool rotate;
@@ -52,6 +54,8 @@ public class OpenClose : MonoBehaviour
             {
                 _isOpen = false;
                 Rotate(translation);
+                
+                
             }
             else if (_isOpen && !rotate)
             {
@@ -62,6 +66,8 @@ public class OpenClose : MonoBehaviour
             {
                 _isOpen = true;
                 Rotate(-translation);
+                controlDoor.SetActive(false);
+                controlFood.SetActive(true);
             }
             else if (!_isOpen && !rotate)
             {

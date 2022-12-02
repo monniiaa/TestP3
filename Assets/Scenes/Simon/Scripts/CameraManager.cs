@@ -10,11 +10,23 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject posterCamera;
     [SerializeField] GameObject trainCamera;
     [SerializeField] GameObject svarUI;
+    [SerializeField] GameObject vaskCam;
+    [SerializeField] GameObject confrontationCam;
+    [SerializeField] GameObject skuffeCam;
+    
+
+
 
     public float trainCameraSwitchTime;
     public float posterCameraSwitchTime;
     public float svarUISwitchTime;
+<<<<<<< Updated upstream
     public StarterAssetsInputs input;
+=======
+    public float vaskTime;
+    public float confrontationTime;
+    public float skuffeCamTime;
+>>>>>>> Stashed changes
 
 
     // Start is called before the first frame update
@@ -73,5 +85,37 @@ public class CameraManager : MonoBehaviour
         
     }
 
+    public void VaskToConfrontation()
+    {
+    vaskCam.SetActive(true);
+    StartCoroutine(Confrontation());
+    }
+
+    IEnumerator Confrontation()
+    {
+    yield return new WaitForSeconds(vaskTime);
+
+    confrontationCam.SetActive(true);
+
+    yield return new WaitForSeconds(confrontationTime);
+
+    svarUI.SetActive(true);
+
+    }
+
+    public void SkuffeCam()
+    {
+    skuffeCam.SetActive(true);
+    StartCoroutine(SkuffeTimer());
+    Debug.Log("skuffeCam Enabled");
+    }
+
+    IEnumerator SkuffeTimer()
+    {
+
+    yield return new WaitForSeconds(skuffeCamTime);
+
+    skuffeCam.SetActive(false);
+    }
 
 }

@@ -11,12 +11,14 @@ public class InteractableE : MonoBehaviour
     public UnityEvent interactionActionE; 
     public UnityEvent interactionNearby;
     public UnityEvent interactionNotNearby;
+    Collider m_Collider;
     //Collider m_Collider;
     
     // Start is called before the first frame update
     void Start()
     {
     //m_Collider = GetComponent<Collider>();
+    m_Collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -79,9 +81,26 @@ public class InteractableE : MonoBehaviour
     this.gameObject.SetActive(true);
     }
 
+<<<<<<< Updated upstream
     public void DestroyObject(GameObject button)
     {
         Destroy(button);
+=======
+    public void Destroyer(GameObject button)
+    {
+    Destroy(button);
+    }
+
+    public void PickedUp()
+    {
+    m_Collider.enabled = false;
+    }
+
+    public void NotInRangeToE()
+
+    {
+    inRangeToE = false;
+>>>>>>> Stashed changes
     }
 }
 

@@ -8,6 +8,7 @@ public class ControllerDisable : MonoBehaviour
     CharacterController controller;
     Animator avatarAnimator;
     PlayerInput playerInput;
+    public GameObject skuffeCam;
     public float controllerShortEnableTime;
     public float controllerLongEnableTime;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class ControllerDisable : MonoBehaviour
     {
     
     controller.enabled = false;
+    playerInput.enabled = false;
     transform.Rotate(0, -177, 0, Space.World);
     StartCoroutine(ControllerShortEnable());
     Debug.Log("Controls disabled");
@@ -35,8 +37,13 @@ public class ControllerDisable : MonoBehaviour
 
     public void FullControlDisable()
     {
+<<<<<<< Updated upstream
         controller.enabled = false;
         playerInput.enabled = false;
+=======
+    controller.enabled = false;
+    playerInput.enabled = false;
+>>>>>>> Stashed changes
     }
 
     IEnumerator ControllerShortEnable()
@@ -44,6 +51,7 @@ public class ControllerDisable : MonoBehaviour
     yield return new WaitForSeconds(controllerShortEnableTime);
 
     controller.enabled = true;
+    playerInput.enabled = true;
     }
     
     public void ControlLongDisable()
