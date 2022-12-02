@@ -20,13 +20,11 @@ public class CameraManager : MonoBehaviour
     public float trainCameraSwitchTime;
     public float posterCameraSwitchTime;
     public float svarUISwitchTime;
-<<<<<<< Updated upstream
     public StarterAssetsInputs input;
-=======
+
     public float vaskTime;
     public float confrontationTime;
     public float skuffeCamTime;
->>>>>>> Stashed changes
 
 
     // Start is called before the first frame update

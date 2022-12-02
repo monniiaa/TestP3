@@ -37,13 +37,8 @@ public class ControllerDisable : MonoBehaviour
 
     public void FullControlDisable()
     {
-<<<<<<< Updated upstream
         controller.enabled = false;
         playerInput.enabled = false;
-=======
-    controller.enabled = false;
-    playerInput.enabled = false;
->>>>>>> Stashed changes
     }
 
     IEnumerator ControllerShortEnable()

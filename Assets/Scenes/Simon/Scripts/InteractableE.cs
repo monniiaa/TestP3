@@ -81,11 +81,12 @@ public class InteractableE : MonoBehaviour
     this.gameObject.SetActive(true);
     }
 
-<<<<<<< Updated upstream
+
     public void DestroyObject(GameObject button)
     {
         Destroy(button);
-=======
+    }
+
     public void Destroyer(GameObject button)
     {
     Destroy(button);
@@ -100,7 +101,6 @@ public class InteractableE : MonoBehaviour
 
     {
     inRangeToE = false;
->>>>>>> Stashed changes
     }
 }
 
