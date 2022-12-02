@@ -48,77 +48,73 @@ public class AudioManager : MonoBehaviour
         source.PlayOneShot(audioclips[soundnumber]);
     }
     void Start()
-    {
-        //PlayWithDelay(0, narratorSource); 
+    { 
         StartCoroutine(PlayAudioSequentially());
     }
     public void StairSound()
     {
         StartCoroutine(PlayStairAudio());
     }
-
-    IEnumerator PlayAudioSequentially()
+    public void EndOfStairSound()
     {
-        yield return null;
-
-        //1.Loop through each AudioClip
-        for (int i = 0; i < 3; i++)
-        {
-            //2.Assign current AudioClip to audiosource
-            narratorSource.clip = audioclips[i];
-
-            //3.Play Audio
-            narratorSource.Play();
-
-            //4.Wait for it to finish playing
-            while (narratorSource.isPlaying)
-            {
-                yield return null;
-            }
-
-            //5. Go back to #2 and play the next audio in the adClips array
-        }
+        StartCoroutine(PlayTrainLeavingAudio());
+    }
+    public void STrainLeaving()
+    {
+        StartCoroutine(PlaySTrainSounds());
     }
 
-    IEnumerator PlayStairAudio()
-    {
-        yield return null;
-
-        //1.Loop through each AudioClip
-        for (int i = 3; i < 4; i++)
+        IEnumerator PlayAudioSequentially()
         {
-            //2.Assign current AudioClip to audiosource
-            narratorSource.clip = audioclips[i];
-
-            //3.Play Audio
-            narratorSource.Play();
-
-            //4.Wait for it to finish playing
-            while (narratorSource.isPlaying)
+            yield return null;
+            for (int i = 0; i < 3; i++)
             {
-                yield return null;
+                narratorSource.clip = audioclips[i];
+                narratorSource.Play();
+                while (narratorSource.isPlaying)
+                {
+                    yield return null;
+                }
             }
-
-            //5. Go back to #2 and play the next audio in the adClips array
         }
 
-
-       
-
-
-        /*public void Play(string name)
+        IEnumerator PlayStairAudio()
         {
-            Sound snd = Array.Find(sounds, sound => sound.name == name);
-            try
+            yield return null;
+            for (int i = 3; i < 4; i++)
             {
-                snd.source.Play();
+                narratorSource.clip = audioclips[i];
+                narratorSource.Play();
+                while (narratorSource.isPlaying)
+                {
+                    yield return null;
+                }
             }
-            catch (Exception exception)
+        }
+        IEnumerator PlayTrainLeavingAudio()
+        {
+            yield return null;
+            for (int i = 4; i < 5; i++)
             {
-                Debug.LogWarning("sound not found");
+                narratorSource.clip = audioclips[i];
+                narratorSource.Play();
+                while (narratorSource.isPlaying)
+                {
+                    yield return null;
+                }
             }
-
-
-        }*/
-    }
-    }
+        }
+        IEnumerator PlaySTrainSounds()
+        {
+            yield return null;
+            for (int i = 7; i < 9; i++)
+            {
+                narratorSource.clip = audioclips[i];
+                narratorSource.Play();
+                while (narratorSource.isPlaying)
+                {
+                    yield return null;
+                }
+            }
+        }
+}

@@ -52,7 +52,7 @@ public class ControllerDisable : MonoBehaviour
     public void ControlLongDisable()
     {
     controller.enabled = false;
-    avatarAnimator.enabled = false;
+    //avatarAnimator.enabled = false;
     playerInput.enabled = false;
 
 
@@ -63,7 +63,7 @@ public class ControllerDisable : MonoBehaviour
     yield return new WaitForSeconds(controllerLongEnableTime);
 
     controller.enabled = true;
-    avatarAnimator.enabled = true;
+    //avatarAnimator.enabled = true;
     playerInput.enabled = true;
     }
 }
