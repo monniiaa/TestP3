@@ -95,7 +95,10 @@ namespace Week03
         {
             // loss condition, simply reset the game
             if (other.tag == "Asteroid")
+            {
                 AsteroidsGame.Instance.restartGameFlag = true;
+            }
+                
         }
     }
 }

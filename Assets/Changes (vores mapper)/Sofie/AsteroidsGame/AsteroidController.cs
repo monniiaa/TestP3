@@ -56,7 +56,11 @@ namespace Week03
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Projectile")
+            {
                 AsteroidsGame.Instance.DestroyAsteroid(this);
+                Debug.Log("Hello");
+            }
+                
 
         }
 
