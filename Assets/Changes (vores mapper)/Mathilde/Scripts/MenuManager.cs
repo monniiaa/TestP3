@@ -60,7 +60,7 @@ public class MenuManager : MonoBehaviour
                 break;
             case "scenarie2":
                 DisablePanels();
-                ChangeScene("House scene");
+                ChangeScene("House scene 1");
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");

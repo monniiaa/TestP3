@@ -86,38 +86,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 fl11Clicked = true;
+                fl11.GetComponent<Image>().color = Color.gray;
                 fl12Clicked = false;
+                fl12.GetComponent<Image>().color = Color.white;
                 fl13Clicked = false;
+                fl13.GetComponent<Image>().color = Color.white;
                 fl14Clicked = false;
+                fl14.GetComponent<Image>().color = Color.white;
                 fl15Clicked = false;
+                fl15.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 fl11Clicked = false;
+                fl11.GetComponent<Image>().color = Color.white;
                 fl12Clicked = true;
+                fl12.GetComponent<Image>().color = Color.gray;
                 fl13Clicked = false;
+                fl13.GetComponent<Image>().color = Color.white;
                 fl14Clicked = false;
+                fl14.GetComponent<Image>().color = Color.white;
                 fl15Clicked = false;
+                fl15.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 fl11Clicked = false;
+                fl11.GetComponent<Image>().color = Color.white;
                 fl12Clicked = false;
+                fl12.GetComponent<Image>().color = Color.white;
                 fl13Clicked = true;
+                fl13.GetComponent<Image>().color = Color.gray;
                 fl14Clicked = false;
+                fl14.GetComponent<Image>().color = Color.white;
                 fl15Clicked = false;
+                fl15.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 fl11Clicked = false;
+                fl11.GetComponent<Image>().color = Color.white;
                 fl12Clicked = false;
+                fl12.GetComponent<Image>().color = Color.white;
                 fl13Clicked = false;
+                fl13.GetComponent<Image>().color = Color.white;
                 fl14Clicked = true;
+                fl14.GetComponent<Image>().color = Color.gray;
                 fl15Clicked = false;
+                fl15.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 fl11Clicked = false;
+                fl11.GetComponent<Image>().color = Color.white;
                 fl12Clicked = false;
+                fl12.GetComponent<Image>().color = Color.white;
                 fl13Clicked = false;
+                fl13.GetComponent<Image>().color = Color.white;
                 fl14Clicked = false;
+                fl14.GetComponent<Image>().color = Color.white;
                 fl15Clicked = true;
+                fl15.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -131,38 +156,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 fl21Clicked = true;
+                fl21.GetComponent<Image>().color = Color.gray;
                 fl22Clicked = false;
+                fl22.GetComponent<Image>().color = Color.white;
                 fl23Clicked = false;
+                fl23.GetComponent<Image>().color = Color.white;
                 fl24Clicked = false;
+                fl24.GetComponent<Image>().color = Color.white;
                 fl25Clicked = false;
+                fl25.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 fl21Clicked = false;
+                fl21.GetComponent<Image>().color = Color.white;
                 fl22Clicked = true;
+                fl22.GetComponent<Image>().color = Color.gray;
                 fl23Clicked = false;
+                fl23.GetComponent<Image>().color = Color.white;
                 fl24Clicked = false;
+                fl24.GetComponent<Image>().color = Color.white;
                 fl25Clicked = false;
+                fl25.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 fl21Clicked = false;
+                fl21.GetComponent<Image>().color = Color.white;
                 fl22Clicked = false;
+                fl22.GetComponent<Image>().color = Color.white;
                 fl23Clicked = true;
+                fl23.GetComponent<Image>().color = Color.gray;
                 fl24Clicked = false;
+                fl24.GetComponent<Image>().color = Color.white;
                 fl25Clicked = false;
+                fl25.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 fl21Clicked = false;
+                fl21.GetComponent<Image>().color = Color.white;
                 fl22Clicked = false;
+                fl22.GetComponent<Image>().color = Color.white;
                 fl23Clicked = false;
+                fl23.GetComponent<Image>().color = Color.white;
                 fl24Clicked = true;
+                fl24.GetComponent<Image>().color = Color.gray;
                 fl25Clicked = false;
+                fl25.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 fl21Clicked = false;
+                fl21.GetComponent<Image>().color = Color.white;
                 fl22Clicked = false;
+                fl22.GetComponent<Image>().color = Color.white;
                 fl23Clicked = false;
+                fl23.GetComponent<Image>().color = Color.white;
                 fl24Clicked = false;
+                fl24.GetComponent<Image>().color = Color.white;
                 fl25Clicked = true;
+                fl25.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -176,38 +226,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 fl31Clicked = true;
+                fl31.GetComponent<Image>().color = Color.gray;
                 fl32Clicked = false;
+                fl32.GetComponent<Image>().color = Color.white;
                 fl33Clicked = false;
+                fl33.GetComponent<Image>().color = Color.white;
                 fl34Clicked = false;
+                fl34.GetComponent<Image>().color = Color.white;
                 fl35Clicked = false;
+                fl35.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 fl31Clicked = false;
+                fl31.GetComponent<Image>().color = Color.white;
                 fl32Clicked = true;
+                fl32.GetComponent<Image>().color = Color.gray;
                 fl33Clicked = false;
+                fl33.GetComponent<Image>().color = Color.white;
                 fl34Clicked = false;
+                fl34.GetComponent<Image>().color = Color.white;
                 fl35Clicked = false;
+                fl35.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 fl31Clicked = false;
+                fl31.GetComponent<Image>().color = Color.white;
                 fl32Clicked = false;
+                fl32.GetComponent<Image>().color = Color.white;
                 fl33Clicked = true;
+                fl33.GetComponent<Image>().color = Color.gray;
                 fl34Clicked = false;
+                fl34.GetComponent<Image>().color = Color.white;
                 fl35Clicked = false;
+                fl35.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 fl31Clicked = false;
+                fl31.GetComponent<Image>().color = Color.white;
                 fl32Clicked = false;
+                fl32.GetComponent<Image>().color = Color.white;
                 fl33Clicked = false;
+                fl33.GetComponent<Image>().color = Color.white;
                 fl34Clicked = true;
+                fl34.GetComponent<Image>().color = Color.gray;
                 fl35Clicked = false;
+                fl35.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 fl31Clicked = false;
+                fl31.GetComponent<Image>().color = Color.white;
                 fl32Clicked = false;
+                fl32.GetComponent<Image>().color = Color.white;
                 fl33Clicked = false;
+                fl33.GetComponent<Image>().color = Color.white;
                 fl34Clicked = false;
+                fl34.GetComponent<Image>().color = Color.white;
                 fl35Clicked = true;
+                fl35.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -221,38 +296,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 fl41Clicked = true;
+                fl41.GetComponent<Image>().color = Color.gray;
                 fl42Clicked = false;
+                fl42.GetComponent<Image>().color = Color.white;
                 fl43Clicked = false;
+                fl43.GetComponent<Image>().color = Color.white;
                 fl44Clicked = false;
+                fl44.GetComponent<Image>().color = Color.white;
                 fl45Clicked = false;
+                fl45.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 fl41Clicked = false;
+                fl41.GetComponent<Image>().color = Color.white;
                 fl42Clicked = true;
+                fl42.GetComponent<Image>().color = Color.gray;
                 fl43Clicked = false;
+                fl43.GetComponent<Image>().color = Color.white;
                 fl44Clicked = false;
+                fl44.GetComponent<Image>().color = Color.white;
                 fl45Clicked = false;
+                fl45.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 fl41Clicked = false;
+                fl41.GetComponent<Image>().color = Color.white;
                 fl42Clicked = false;
+                fl42.GetComponent<Image>().color = Color.white;
                 fl43Clicked = true;
+                fl43.GetComponent<Image>().color = Color.gray;
                 fl44Clicked = false;
+                fl44.GetComponent<Image>().color = Color.white;
                 fl45Clicked = false;
+                fl45.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 fl41Clicked = false;
+                fl41.GetComponent<Image>().color = Color.white;
                 fl42Clicked = false;
+                fl42.GetComponent<Image>().color = Color.white;
                 fl43Clicked = false;
+                fl43.GetComponent<Image>().color = Color.white;
                 fl44Clicked = true;
+                fl44.GetComponent<Image>().color = Color.gray;
                 fl45Clicked = false;
+                fl45.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 fl41Clicked = false;
+                fl41.GetComponent<Image>().color = Color.white;
                 fl42Clicked = false;
+                fl42.GetComponent<Image>().color = Color.white;
                 fl43Clicked = false;
+                fl43.GetComponent<Image>().color = Color.white;
                 fl44Clicked = false;
+                fl44.GetComponent<Image>().color = Color.white;
                 fl45Clicked = true;
+                fl45.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -266,38 +366,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 ab11Clicked = true;
+                ab11.GetComponent<Image>().color = Color.gray;
                 ab12Clicked = false;
+                ab12.GetComponent<Image>().color = Color.white;
                 ab13Clicked = false;
+                ab13.GetComponent<Image>().color = Color.white;
                 ab14Clicked = false;
+                ab14.GetComponent<Image>().color = Color.white;
                 ab15Clicked = false;
+                ab15.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 ab11Clicked = false;
+                ab11.GetComponent<Image>().color = Color.white;
                 ab12Clicked = true;
+                ab12.GetComponent<Image>().color = Color.gray;
                 ab13Clicked = false;
+                ab13.GetComponent<Image>().color = Color.white;
                 ab14Clicked = false;
+                ab15.GetComponent<Image>().color = Color.white;
                 ab15Clicked = false;
+                ab15.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 ab11Clicked = false;
+                ab11.GetComponent<Image>().color = Color.white;
                 ab12Clicked = false;
+                ab12.GetComponent<Image>().color = Color.white;
                 ab13Clicked = true;
+                ab13.GetComponent<Image>().color = Color.gray;
                 ab14Clicked = false;
+                ab14.GetComponent<Image>().color = Color.white;
                 ab15Clicked = false;
+                ab15.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 ab11Clicked = false;
+                ab11.GetComponent<Image>().color = Color.white;
                 ab12Clicked = false;
+                ab12.GetComponent<Image>().color = Color.white;
                 ab13Clicked = false;
+                ab13.GetComponent<Image>().color = Color.white;
                 ab14Clicked = true;
+                ab14.GetComponent<Image>().color = Color.gray;
                 ab15Clicked = false;
+                ab15.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 ab11Clicked = false;
+                ab11.GetComponent<Image>().color = Color.white;
                 ab12Clicked = false;
+                ab12.GetComponent<Image>().color = Color.white;
                 ab13Clicked = false;
+                ab13.GetComponent<Image>().color = Color.white;
                 ab14Clicked = false;
+                ab14.GetComponent<Image>().color = Color.white;
                 ab15Clicked = true;
+                ab15.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -311,38 +436,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 ab21Clicked = true;
+                ab21.GetComponent<Image>().color = Color.gray;
                 ab22Clicked = false;
+                ab22.GetComponent<Image>().color = Color.white;
                 ab23Clicked = false;
+                ab23.GetComponent<Image>().color = Color.white;
                 ab24Clicked = false;
+                ab24.GetComponent<Image>().color = Color.white;
                 ab25Clicked = false;
+                ab25.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 ab21Clicked = false;
+                ab21.GetComponent<Image>().color = Color.white;
                 ab22Clicked = true;
+                ab22.GetComponent<Image>().color = Color.gray;
                 ab23Clicked = false;
+                ab23.GetComponent<Image>().color = Color.white;
                 ab24Clicked = false;
+                ab24.GetComponent<Image>().color = Color.white;
                 ab25Clicked = false;
+                ab25.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 ab21Clicked = false;
+                ab21.GetComponent<Image>().color = Color.white;
                 ab22Clicked = false;
+                ab22.GetComponent<Image>().color = Color.white;
                 ab23Clicked = true;
+                ab23.GetComponent<Image>().color = Color.gray;
                 ab24Clicked = false;
+                ab24.GetComponent<Image>().color = Color.white;
                 ab25Clicked = false;
+                ab25.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 ab21Clicked = false;
+                ab21.GetComponent<Image>().color = Color.white;
                 ab22Clicked = false;
+                ab22.GetComponent<Image>().color = Color.white;
                 ab23Clicked = false;
+                ab23.GetComponent<Image>().color = Color.white;
                 ab24Clicked = true;
+                ab24.GetComponent<Image>().color = Color.gray;
                 ab25Clicked = false;
+                ab25.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 ab21Clicked = false;
+                ab21.GetComponent<Image>().color = Color.white;
                 ab22Clicked = false;
+                ab22.GetComponent<Image>().color = Color.white;
                 ab23Clicked = false;
+                ab23.GetComponent<Image>().color = Color.white;
                 ab24Clicked = false;
+                ab24.GetComponent<Image>().color = Color.white;
                 ab25Clicked = true;
+                ab25.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -356,38 +506,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 ab31Clicked = true;
+                ab31.GetComponent<Image>().color = Color.gray;
                 ab32Clicked = false;
+                ab32.GetComponent<Image>().color = Color.white;
                 ab33Clicked = false;
+                ab33.GetComponent<Image>().color = Color.white;
                 ab34Clicked = false;
+                ab34.GetComponent<Image>().color = Color.white;
                 ab35Clicked = false;
+                ab35.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 ab31Clicked = false;
+                ab31.GetComponent<Image>().color = Color.white;
                 ab32Clicked = true;
+                ab32.GetComponent<Image>().color = Color.gray;
                 ab33Clicked = false;
+                ab33.GetComponent<Image>().color = Color.white;
                 ab34Clicked = false;
+                ab34.GetComponent<Image>().color = Color.white;
                 ab35Clicked = false;
+                ab35.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 ab31Clicked = false;
+                ab31.GetComponent<Image>().color = Color.white;
                 ab32Clicked = false;
+                ab32.GetComponent<Image>().color = Color.white;
                 ab33Clicked = true;
+                ab33.GetComponent<Image>().color = Color.gray;
                 ab34Clicked = false;
+                ab34.GetComponent<Image>().color = Color.white;
                 ab35Clicked = false;
+                ab35.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 ab31Clicked = false;
+                ab31.GetComponent<Image>().color = Color.white;
                 ab32Clicked = false;
+                ab32.GetComponent<Image>().color = Color.white;
                 ab33Clicked = false;
+                ab33.GetComponent<Image>().color = Color.white;
                 ab34Clicked = true;
+                ab34.GetComponent<Image>().color = Color.gray;
                 ab35Clicked = false;
+                ab35.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 ab31Clicked = false;
+                ab31.GetComponent<Image>().color = Color.white;
                 ab32Clicked = false;
+                ab32.GetComponent<Image>().color = Color.white;
                 ab33Clicked = false;
+                ab33.GetComponent<Image>().color = Color.white;
                 ab34Clicked = false;
+                ab34.GetComponent<Image>().color = Color.white;
                 ab35Clicked = true;
+                ab35.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -401,38 +576,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 ab41Clicked = true;
+                ab41.GetComponent<Image>().color = Color.gray;
                 ab42Clicked = false;
+                ab42.GetComponent<Image>().color = Color.white;
                 ab43Clicked = false;
+                ab43.GetComponent<Image>().color = Color.white;
                 ab44Clicked = false;
+                ab44.GetComponent<Image>().color = Color.white;
                 ab45Clicked = false;
+                ab45.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 ab41Clicked = false;
+                ab41.GetComponent<Image>().color = Color.white;
                 ab42Clicked = true;
+                ab42.GetComponent<Image>().color = Color.gray;
                 ab43Clicked = false;
+                ab43.GetComponent<Image>().color = Color.white;
                 ab44Clicked = false;
+                ab44.GetComponent<Image>().color = Color.white;
                 ab45Clicked = false;
+                ab45.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 ab41Clicked = false;
+                ab41.GetComponent<Image>().color = Color.white;
                 ab42Clicked = false;
+                ab42.GetComponent<Image>().color = Color.white;
                 ab43Clicked = true;
+                ab43.GetComponent<Image>().color = Color.gray;
                 ab44Clicked = false;
+                ab44.GetComponent<Image>().color = Color.white;
                 ab45Clicked = false;
+                ab45.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 ab41Clicked = false;
+                ab41.GetComponent<Image>().color = Color.white;
                 ab42Clicked = false;
+                ab42.GetComponent<Image>().color = Color.white;
                 ab43Clicked = false;
+                ab43.GetComponent<Image>().color = Color.white;
                 ab44Clicked = true;
+                ab44.GetComponent<Image>().color = Color.gray;
                 ab45Clicked = false;
+                ab45.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 ab41Clicked = false;
+                ab41.GetComponent<Image>().color = Color.white;
                 ab42Clicked = false;
+                ab42.GetComponent<Image>().color = Color.white;
                 ab43Clicked = false;
+                ab43.GetComponent<Image>().color = Color.white;
                 ab44Clicked = false;
+                ab44.GetComponent<Image>().color = Color.white;
                 ab45Clicked = true;
+                ab45.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -446,38 +646,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 pa11Clicked = true;
+                pa11.GetComponent<Image>().color = Color.gray;
                 pa12Clicked = false;
+                pa12.GetComponent<Image>().color = Color.white;
                 pa13Clicked = false;
+                pa13.GetComponent<Image>().color = Color.white;
                 pa14Clicked = false;
+                pa14.GetComponent<Image>().color = Color.white;
                 pa15Clicked = false;
+                pa15.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 pa11Clicked = false;
+                pa11.GetComponent<Image>().color = Color.white;
                 pa12Clicked = true;
+                pa12.GetComponent<Image>().color = Color.gray;
                 pa13Clicked = false;
+                pa13.GetComponent<Image>().color = Color.white;
                 pa14Clicked = false;
+                pa14.GetComponent<Image>().color = Color.white;
                 pa15Clicked = false;
+                pa15.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 pa11Clicked = false;
+                pa11.GetComponent<Image>().color = Color.white;
                 pa12Clicked = false;
+                pa12.GetComponent<Image>().color = Color.white;
                 pa13Clicked = true;
+                pa13.GetComponent<Image>().color = Color.gray;
                 pa14Clicked = false;
+                pa14.GetComponent<Image>().color = Color.white;
                 pa15Clicked = false;
+                pa15.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 pa11Clicked = false;
+                pa11.GetComponent<Image>().color = Color.white;
                 pa12Clicked = false;
+                pa12.GetComponent<Image>().color = Color.white;
                 pa13Clicked = false;
+                pa13.GetComponent<Image>().color = Color.white;
                 pa14Clicked = true;
+                pa14.GetComponent<Image>().color = Color.gray;
                 pa15Clicked = false;
+                pa15.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 pa11Clicked = false;
+                pa11.GetComponent<Image>().color = Color.white;
                 pa12Clicked = false;
+                pa12.GetComponent<Image>().color = Color.white;
                 pa13Clicked = false;
+                pa13.GetComponent<Image>().color = Color.white;
                 pa14Clicked = false;
+                pa14.GetComponent<Image>().color = Color.white;
                 pa15Clicked = true;
+                pa15.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -491,38 +716,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 pa21Clicked = true;
+                pa21.GetComponent<Image>().color = Color.gray;
                 pa22Clicked = false;
+                pa22.GetComponent<Image>().color = Color.white;
                 pa23Clicked = false;
+                pa23.GetComponent<Image>().color = Color.white;
                 pa24Clicked = false;
+                pa24.GetComponent<Image>().color = Color.white;
                 pa25Clicked = false;
+                pa25.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 pa21Clicked = false;
+                pa21.GetComponent<Image>().color = Color.white;
                 pa22Clicked = true;
+                pa22.GetComponent<Image>().color = Color.gray;
                 pa23Clicked = false;
+                pa23.GetComponent<Image>().color = Color.white;
                 pa24Clicked = false;
+                pa25.GetComponent<Image>().color = Color.white;
                 pa25Clicked = false;
+                pa25.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 pa21Clicked = false;
+                pa21.GetComponent<Image>().color = Color.white;
                 pa22Clicked = false;
+                pa22.GetComponent<Image>().color = Color.white;
                 pa23Clicked = true;
+                pa23.GetComponent<Image>().color = Color.gray;
                 pa24Clicked = false;
+                pa24.GetComponent<Image>().color = Color.white;
                 pa25Clicked = false;
+                pa25.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 pa21Clicked = false;
+                pa21.GetComponent<Image>().color = Color.white;
                 pa22Clicked = false;
+                pa22.GetComponent<Image>().color = Color.white;
                 pa23Clicked = false;
+                pa23.GetComponent<Image>().color = Color.white;
                 pa24Clicked = true;
+                pa24.GetComponent<Image>().color = Color.gray;
                 pa25Clicked = false;
+                pa25.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 pa21Clicked = false;
+                pa21.GetComponent<Image>().color = Color.white;
                 pa22Clicked = false;
+                pa22.GetComponent<Image>().color = Color.white;
                 pa23Clicked = false;
+                pa23.GetComponent<Image>().color = Color.white;
                 pa24Clicked = false;
+                pa24.GetComponent<Image>().color = Color.white;
                 pa25Clicked = true;
+                pa25.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -536,38 +786,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 id11Clicked = true;
+                id11.GetComponent<Image>().color = Color.gray;
                 id12Clicked = false;
+                id12.GetComponent<Image>().color = Color.white;
                 id13Clicked = false;
+                id13.GetComponent<Image>().color = Color.white;
                 id14Clicked = false;
+                id14.GetComponent<Image>().color = Color.white;
                 id15Clicked = false;
+                id15.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 id11Clicked = false;
+                id11.GetComponent<Image>().color = Color.white;
                 id12Clicked = true;
+                id12.GetComponent<Image>().color = Color.gray;
                 id13Clicked = false;
+                id13.GetComponent<Image>().color = Color.white;
                 id14Clicked = false;
+                id14.GetComponent<Image>().color = Color.white;
                 id15Clicked = false;
+                id15.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 id11Clicked = false;
+                id11.GetComponent<Image>().color = Color.white;
                 id12Clicked = false;
+                id12.GetComponent<Image>().color = Color.white;
                 id13Clicked = true;
+                id13.GetComponent<Image>().color = Color.gray;
                 id14Clicked = false;
+                id14.GetComponent<Image>().color = Color.white;
                 id15Clicked = false;
+                id15.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 id11Clicked = false;
+                id11.GetComponent<Image>().color = Color.white;
                 id12Clicked = false;
+                id12.GetComponent<Image>().color = Color.white;
                 id13Clicked = false;
+                id13.GetComponent<Image>().color = Color.white;
                 id14Clicked = true;
+                id14.GetComponent<Image>().color = Color.gray;
                 id15Clicked = false;
+                id15.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 id11Clicked = false;
+                id11.GetComponent<Image>().color = Color.white;
                 id12Clicked = false;
+                id12.GetComponent<Image>().color = Color.white;
                 id13Clicked = false;
+                id13.GetComponent<Image>().color = Color.white;
                 id14Clicked = false;
+                id14.GetComponent<Image>().color = Color.white;
                 id15Clicked = true;
+                id15.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -581,38 +856,63 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 id21Clicked = true;
+                id21.GetComponent<Image>().color = Color.gray;
                 id22Clicked = false;
+                id22.GetComponent<Image>().color = Color.white;
                 id23Clicked = false;
+                id23.GetComponent<Image>().color = Color.white;
                 id24Clicked = false;
+                id24.GetComponent<Image>().color = Color.white;
                 id25Clicked = false;
+                id25.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 id21Clicked = false;
+                id21.GetComponent<Image>().color = Color.white;
                 id22Clicked = true;
+                id22.GetComponent<Image>().color = Color.gray;
                 id23Clicked = false;
+                id23.GetComponent<Image>().color = Color.white;
                 id24Clicked = false;
+                id24.GetComponent<Image>().color = Color.white;
                 id25Clicked = false;
+                id25.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 id21Clicked = false;
+                id21.GetComponent<Image>().color = Color.white;
                 id22Clicked = false;
+                id22.GetComponent<Image>().color = Color.white;
                 id23Clicked = true;
+                id23.GetComponent<Image>().color = Color.gray;
                 id24Clicked = false;
+                id24.GetComponent<Image>().color = Color.white;
                 id25Clicked = false;
+                id25.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 id21Clicked = false;
+                id21.GetComponent<Image>().color = Color.white;
                 id22Clicked = false;
+                id22.GetComponent<Image>().color = Color.white;
                 id23Clicked = false;
+                id23.GetComponent<Image>().color = Color.white;
                 id24Clicked = true;
+                id24.GetComponent<Image>().color = Color.gray;
                 id25Clicked = false;
+                id25.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 id21Clicked = false;
+                id21.GetComponent<Image>().color = Color.white;
                 id22Clicked = false;
+                id22.GetComponent<Image>().color = Color.white;
                 id23Clicked = false;
+                id23.GetComponent<Image>().color = Color.white;
                 id24Clicked = false;
+                id24.GetComponent<Image>().color = Color.white;
                 id25Clicked = true;
+                id25.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
@@ -626,66 +926,67 @@ public class EndPanelTrain : MonoBehaviour
         {
             case 1:
                 id31Clicked = true;
+                id31.GetComponent<Image>().color = Color.gray;
                 id32Clicked = false;
+                id32.GetComponent<Image>().color = Color.white;
                 id33Clicked = false;
+                id33.GetComponent<Image>().color = Color.white;
                 id34Clicked = false;
+                id34.GetComponent<Image>().color = Color.white;
                 id35Clicked = false;
+                id35.GetComponent<Image>().color = Color.white;
                 break;
             case 2:
                 id31Clicked = false;
+                id31.GetComponent<Image>().color = Color.white;
                 id32Clicked = true;
+                id32.GetComponent<Image>().color = Color.gray;
                 id33Clicked = false;
+                id33.GetComponent<Image>().color = Color.white;
                 id34Clicked = false;
+                id34.GetComponent<Image>().color = Color.white;
                 id35Clicked = false;
+                id35.GetComponent<Image>().color = Color.white;
                 break;
             case 3:
                 id31Clicked = false;
+                id31.GetComponent<Image>().color = Color.white;
                 id32Clicked = false;
+                id32.GetComponent<Image>().color = Color.white;
                 id33Clicked = true;
+                id33.GetComponent<Image>().color = Color.gray;
                 id34Clicked = false;
+                id34.GetComponent<Image>().color = Color.white;
                 id35Clicked = false;
+                id35.GetComponent<Image>().color = Color.white;
                 break;
             case 4:
                 id31Clicked = false;
+                id31.GetComponent<Image>().color = Color.white;
                 id32Clicked = false;
+                id32.GetComponent<Image>().color = Color.white;
                 id33Clicked = false;
+                id33.GetComponent<Image>().color = Color.white;
                 id34Clicked = true;
+                id34.GetComponent<Image>().color = Color.gray;
                 id35Clicked = false;
+                id35.GetComponent<Image>().color = Color.white;
                 break;
             case 5:
                 id31Clicked = false;
+                id31.GetComponent<Image>().color = Color.white;
                 id32Clicked = false;
+                id32.GetComponent<Image>().color = Color.white;
                 id33Clicked = false;
+                id33.GetComponent<Image>().color = Color.white;
                 id34Clicked = false;
+                id34.GetComponent<Image>().color = Color.white;
                 id35Clicked = true;
+                id35.GetComponent<Image>().color = Color.gray;
                 break;
             default:
                 Debug.Log("fejl i panels, buttons eller switch statements");
                 break;
-        }
-    }
-
-    public void ChangeButtonColorFL()
-    {
-        if (fl11Clicked)
-        {
-            fl11.gameObject.GetComponent<Image>().color = new Color(129, 137, 144);
-        }
-        else if (fl12Clicked)
-        {
-            fl12.gameObject.GetComponent<Image>().color = new Color(129, 137, 144);
-        }
-        else if (fl13Clicked)
-        {
-            fl13.gameObject.GetComponent<Image>().color = new Color(129, 137, 144);
-        }
-        else if (fl14Clicked)
-        {
-            fl14.gameObject.GetComponent<Image>().color = new Color(129, 137, 144);
-        }
-        else if (fl15Clicked)
-        {
-            fl15.gameObject.GetComponent<Image>().color = new Color(129, 137, 144);
         }
     }
 
