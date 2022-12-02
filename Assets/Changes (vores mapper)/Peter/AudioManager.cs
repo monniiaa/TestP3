@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public AudioSource narratorSource;
+    Queue<AudioClip> clipQueue;
     void Awake()
     {
         if (instance == null)
@@ -40,18 +41,70 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayWithDelay(0, narratorSource);
-        
+        //PlayWithDelay(0, narratorSource); 
+        StartCoroutine(PlayAudioSequentially());   
+    }
+    public void StairSound()
+    {
+       StartCoroutine(PlayStairAudio());
+    }
+    
+    IEnumerator PlayAudioSequentially()
+    {
+    yield return null;
+
+    //1.Loop through each AudioClip
+    for (int i = 0; i < 3; i++)
+    {
+        //2.Assign current AudioClip to audiosource
+        narratorSource.clip = audioclips[i];
+
+        //3.Play Audio
+        narratorSource.Play();
+
+        //4.Wait for it to finish playing
+        while (narratorSource.isPlaying)
+        {
+            yield return null;
+        }
+
+        //5. Go back to #2 and play the next audio in the adClips array
+    }
     }
 
-    public void PlaySound(int soundnumber, AudioSource source)
+    IEnumerator PlayStairAudio()
+    {
+    yield return null;
+
+    //1.Loop through each AudioClip
+    for (int i = 3; i < 5; i++)
+    {
+        //2.Assign current AudioClip to audiosource
+        narratorSource.clip = audioclips[i];
+
+        //3.Play Audio
+        narratorSource.Play();
+
+        //4.Wait for it to finish playing
+        while (narratorSource.isPlaying)
+        {
+            yield return null;
+        }
+
+        //5. Go back to #2 and play the next audio in the adClips array
+    }
+
+
+     void PlaySound(int soundnumber, AudioSource source)
     {
         source.PlayOneShot(audioclips[soundnumber]);
     }
-    public void PlayWithDelay(int soundnumber, AudioSource source)
+    void PlayWithDelay(int soundnumber, AudioSource source)
     {
         source.clip = audioclips[soundnumber];
         source.PlayDelayed(4);
+        source.clip = audioclips[soundnumber];
+        source.clip = audioclips[soundnumber];
     }
     /*public void Play(string name)
     {
@@ -67,4 +120,5 @@ public class AudioManager : MonoBehaviour
     
         
     }*/
+    }
 }
