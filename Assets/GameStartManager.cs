@@ -34,9 +34,9 @@ public class GameStartManager : MonoBehaviour
             {
                 Debug.Log("enabled");
                 currentTime = 0;
-                canvas.SetActive(true);
-                controller.enabled = false;
-                playerInput.enabled = false;
+                canvas.SetActive(false);
+                controller.enabled = true;
+                playerInput.enabled = true;
                 startCounter = false;
             }
         }

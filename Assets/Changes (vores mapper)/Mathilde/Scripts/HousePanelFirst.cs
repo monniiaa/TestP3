@@ -4,9 +4,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using StarterAssets;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.InputSystem;
 
 public class HousePanelFirst : MonoBehaviour
 {
+    public bool startCounter;
+    public float currentTime;
     public GameObject choosePanel;
     public GameObject angryPanel;
     public GameObject worriedPanel;
@@ -19,6 +23,10 @@ public class HousePanelFirst : MonoBehaviour
     public bool angryClicked, worriedClicked, neutralClicked;
     public bool angry1Clicked, angry2Clicked, angry3Clicked, angry4Clicked, angry5Clicked;
     public bool worried1Clicked, worried2Clicked, worried3Clicked, worried4Clicked, worried5Clicked;
+    public AudiManagerHouse audiManager;
+    public List<AudioClip> audiolist;
+    public string nextSceneName;
+
 
     public void Start()
     {
@@ -170,6 +178,8 @@ public class HousePanelFirst : MonoBehaviour
         if (angryClicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
+            audiManager.EnqueueAudioClip(audiolist[0]);
             angryPanel.SetActive(true);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling = "angry";
             Debug.Log("angry panel + next");
@@ -177,6 +187,9 @@ public class HousePanelFirst : MonoBehaviour
         else if (worriedClicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
+            audiManager.EnqueueAudioClip(audiolist[1]);
+
             worriedPanel.SetActive(true);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling = "worried";
             Debug.Log("worried panel + next");
@@ -184,6 +197,8 @@ public class HousePanelFirst : MonoBehaviour
         else if (neutralClicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
+            audiManager.EnqueueAudioClip(audiolist[2]);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling = "neutral";
             ChangeScene("EndScene");
             Debug.Log("neutral panel + next");
@@ -195,38 +210,54 @@ public class HousePanelFirst : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
-            ChangeScene("House Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 1;
             Debug.Log("angry panel + next");
         }
         else if (angry2Clicked)
         {
             DisablePanels();
-            ChangeScene("House Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 2;
+
             Debug.Log("angry panel + next");
         }
         else if (angry3Clicked)
         {
             DisablePanels();
-            ChangeScene("House Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 3;
             Debug.Log("angry panel + next");
         }
         else if (angry4Clicked)
         {
             DisablePanels();
-            ChangeScene("House Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 4;
             Debug.Log("angry panel + next");
         }
         else if (angry5Clicked)
         {
             DisablePanels();
-            ChangeScene("House Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 5;
             Debug.Log("angry panel + next");
         }
+    }
+
+    public void EndVoiceLine()
+    {
+        audiManager.EnqueueAudioClip(audiolist[5]);
     }
 
     public void WorriedAmountPanel()
@@ -234,39 +265,66 @@ public class HousePanelFirst : MonoBehaviour
         if (worried1Clicked)
             {
                 DisablePanels();
-                ChangeScene("House Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 1;
                 Debug.Log("worried panel + next");
             }
         else if (worried2Clicked)
             {
                 DisablePanels();
-                ChangeScene("House Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 2;
                 Debug.Log("worried panel + next");
             }
         else if (worried3Clicked)
             {
                 DisablePanels();
-                ChangeScene("House Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 3;
                 Debug.Log("worried panel + next");
             }
         else if (worried4Clicked)
             {
                 DisablePanels();
-                ChangeScene("House Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 4;
                 Debug.Log("worried panel + next");
             }
         else if (worried5Clicked)
             {
                 DisablePanels();
-                ChangeScene("House Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 5;
                 Debug.Log("worried panel + next");
             }
+    }
+
+    void Update()
+    {
+        if (startCounter)
+        {
+            currentTime -= 1 * Time.deltaTime;
+
+            if (currentTime <= 0)
+            {
+                Debug.Log("enabled");
+                currentTime = 0;
+                ChangeScene(nextSceneName);
+                startCounter = false;
+            }
         }
+
+    }
 
     public void ChangeScene(string sceneName)
     {
