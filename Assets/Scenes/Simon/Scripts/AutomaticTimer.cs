@@ -27,6 +27,7 @@ public class AutomaticTimer : MonoBehaviour
         {
         tavleInteractableChecker.SetActive(true);
         audioManager.PlaySound(6, audioManager.narratorSource); 
+            timeStarter = false;
         }
     }
 

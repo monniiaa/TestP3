@@ -73,7 +73,7 @@ public class InteractableE : MonoBehaviour
 
     public void SelfDestroyer()
     {
-    Destroy(this.gameObject);
+    Destroy(this);
     }
 
     public void ESelfActivator()

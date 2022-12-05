@@ -30,7 +30,7 @@ public class ControllerDisable : MonoBehaviour
     
     controller.enabled = false;
     playerInput.enabled = false;
-    transform.Rotate(0, -177, 0, Space.World);
+    //transform.Rotate(0, -177, 0, Space.World);
     StartCoroutine(ControllerShortEnable());
     Debug.Log("Controls disabled");
     }
