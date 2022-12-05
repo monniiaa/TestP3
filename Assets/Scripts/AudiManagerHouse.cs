@@ -30,8 +30,7 @@ public class AudiManagerHouse : MonoBehaviour
         {
             if (audioClips.Count != 0)
             {
-                audioPlayer.PlayOneShot(audioClips.Peek());
-                audioClips.Dequeue();
+                audioPlayer.PlayOneShot(audioClips.Dequeue());   
             }
         }
     }
