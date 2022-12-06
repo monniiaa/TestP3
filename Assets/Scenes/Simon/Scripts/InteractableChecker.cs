@@ -12,13 +12,15 @@ public class InteractableChecker : MonoBehaviour
     public UnityEvent interactionAction; 
     public UnityEvent secondInteractionAction;
     public UnityEvent thirdInteractionAction;
-
+    public AudioSource audiosource;
+    public AudioClip audioclip;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -63,6 +65,8 @@ public class InteractableChecker : MonoBehaviour
     public void SelfActivator()
     {
     this.gameObject.SetActive(true);
+    
+    
     }
 
     public void SelfDeactivator()

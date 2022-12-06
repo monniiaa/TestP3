@@ -7,11 +7,12 @@ public class AutomaticTimer : MonoBehaviour
     public float timeRemaining;
     public bool timeStarter;
     public GameObject tavleInteractableChecker;
-    public AudioManager audioManager;
+    public AudiManagerHouse audioManager;
+    public AudioSource audiosource;
+    public AudioClip audioclip;
   
     void Start()
     {
-        audioManager = AudioManager.instance;
     }
     void Update() 
     {
@@ -26,7 +27,7 @@ public class AutomaticTimer : MonoBehaviour
         if(timeRemaining <= 0)
         {
         tavleInteractableChecker.SetActive(true);
-        audioManager.PlaySound(6, audioManager.narratorSource); 
+            audioManager.EnqueueAudioClip(audioclip);
             timeStarter = false;
         }
     }
@@ -35,4 +36,8 @@ public class AutomaticTimer : MonoBehaviour
     {
     timeStarter = true;
     }
+    //public void PlayAlternative()
+    //{
+    //    audiosource.PlayDelayed(0);
+    //}
 }

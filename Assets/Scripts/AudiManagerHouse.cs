@@ -39,5 +39,6 @@ public class AudiManagerHouse : MonoBehaviour
     {
         audioClips.Enqueue(clip);
     }
+    
 
 }
