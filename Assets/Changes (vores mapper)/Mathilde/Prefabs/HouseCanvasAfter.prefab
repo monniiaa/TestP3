@@ -1014,6 +1014,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angryPanel: {fileID: 1824962041360976402}
   worriedPanel: {fileID: 1824962041760431429}
+  confetti: {fileID: 6173285434953497172, guid: 9c183ccd6b9684255913d9f83ecd622e, type: 3}
+  confettiTime: 5
   angry1: {fileID: 1824962041685688723}
   angry2: {fileID: 1824962041234457034}
   angry3: {fileID: 1824962041674604244}

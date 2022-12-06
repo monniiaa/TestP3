@@ -978,6 +978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824962041511657779}
   - component: {fileID: 7250640593702752980}
+  - component: {fileID: 331172338363764370}
   m_Layer: 0
   m_Name: PanelManager
   m_TagString: Untagged
@@ -1014,6 +1015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angryPanel: {fileID: 1824962041360976402}
   worriedPanel: {fileID: 1824962041760431429}
+  confetti: {fileID: 6173285434953497172, guid: 9c183ccd6b9684255913d9f83ecd622e, type: 3}
+  confettiTime: 5
   angry1: {fileID: 1824962041685688723}
   angry2: {fileID: 1824962041234457034}
   angry3: {fileID: 1824962041674604244}
@@ -1034,6 +1037,19 @@ MonoBehaviour:
   worried3Clicked: 0
   worried4Clicked: 0
   worried5Clicked: 0
+--- !u!114 &331172338363764370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824962041511657778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842913315e912442e9843a274fd8c56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confetti: {fileID: 6173285434953497172, guid: 9c183ccd6b9684255913d9f83ecd622e, type: 3}
 --- !u!1 &1824962041603946240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1185,18 @@ MonoBehaviour:
           m_StringArgument: EndTrainScene
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 331172338363764370}
+        m_TargetAssemblyTypeName: ConfettiActivator, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1824962041603946242
 MonoBehaviour:
   m_ObjectHideFlags: 0
