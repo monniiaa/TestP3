@@ -109,15 +109,15 @@ public class PythonCommunication : MonoBehaviour
                 if (data1[0] == 'R')
                 {
                     
-                    AvatarData.RGBHairColor.r = (float.Parse(hairdata) + 20)/ 255f;
+                    AvatarData.RGBHairColor.r = (float.Parse(hairdata) + 10)/ 255f;
                 }
                 else if (data1[0] == 'G')
                 {
-                    AvatarData.RGBHairColor.g = (float.Parse(hairdata)+ 20)/255f;
+                    AvatarData.RGBHairColor.g = (float.Parse(hairdata)+ 10)/255f;
                 }
                 else if (data1[0] == 'B')
                 {
-                    AvatarData.RGBHairColor.b = (float.Parse(hairdata)+ 20)/255f;
+                    AvatarData.RGBHairColor.b = (float.Parse(hairdata)+ 10)/255f;
                     Debug.Log(AvatarData.RGBHairColor);
                 }
                 break;
