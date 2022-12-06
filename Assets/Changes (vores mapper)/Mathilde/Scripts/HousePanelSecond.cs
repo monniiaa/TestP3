@@ -8,12 +8,19 @@ public class HousePanelSecond : MonoBehaviour
 {
     public GameObject angryPanel;
     public GameObject worriedPanel;
+    public bool startCounter;
+    public float currentTime;
 
     public Button angry1, angry2, angry3, angry4, angry5;
     public Button worried1, worried2, worried3, worried4, worried5;
 
     public bool angry1Clicked, angry2Clicked, angry3Clicked, angry4Clicked, angry5Clicked;
     public bool worried1Clicked, worried2Clicked, worried3Clicked, worried4Clicked, worried5Clicked;
+
+    public AudioClip[] audioClips;
+    public float timer;
+    public string nextSceneName;
+    public AudiManagerHouse audiManager;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +40,13 @@ public class HousePanelSecond : MonoBehaviour
         if (GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling == "angry")
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[0]);
             angryPanel.SetActive(true);
         }
         else if (GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling == "worried")
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[1]);
             worriedPanel.SetActive(true);
         }
     }
@@ -143,35 +152,35 @@ public class HousePanelSecond : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
             Debug.Log("angry panel + next");
         }
         else if (angry2Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
             Debug.Log("angry panel + next");
         }
         else if (angry3Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
             Debug.Log("angry panel + next");
         }
         else if (angry4Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
             Debug.Log("angry panel + next");
         }
         else if (angry5Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
             Debug.Log("angry panel + next");
         }
@@ -182,40 +191,53 @@ public class HousePanelSecond : MonoBehaviour
         if (worried1Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
             Debug.Log("worried panel + next");
         }
         else if (worried2Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
             Debug.Log("worried panel + next");
         }
         else if (worried3Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
             Debug.Log("worried panel + next");
         }
         else if (worried4Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
             Debug.Log("worried panel + next");
         }
         else if (worried5Clicked)
         {
             DisablePanels();
-            ChangeScene("EndHouseScene");
+            ChangeScene(nextSceneName);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
             Debug.Log("worried panel + next");
         }
     }
+    void Update()
+    {
+        if (startCounter)
+        {
+            currentTime -= 1 * Time.deltaTime;
 
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                ChangeScene(nextSceneName);
+                startCounter = false;
+            }
+        }
+    }
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

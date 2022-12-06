@@ -1900,8 +1900,12 @@ MonoBehaviour:
   scenariosPanel: {fileID: 0}
   avatarPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
-  transition: {fileID: 0}
-  transitionTime: 5
+  avatar: {fileID: 0}
+  scenarier: {fileID: 0}
+  indstillinger: {fileID: 0}
+  lavEnAvatar: {fileID: 0}
+  scenarie1: {fileID: 0}
+  scenarie2: {fileID: 0}
 --- !u!4 &1924190882
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,7 +2019,7 @@ RectTransform:
   m_GameObject: {fileID: 2050604120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2102152174}
