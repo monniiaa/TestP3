@@ -11,6 +11,7 @@ public class ControllerDisable : MonoBehaviour
     public GameObject skuffeCam;
     public float controllerShortEnableTime;
     public float controllerLongEnableTime;
+    public float controllerMediumEnableTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,24 @@ public class ControllerDisable : MonoBehaviour
 
     controller.enabled = true;
     playerInput.enabled = true;
+    }
+
+    IEnumerator ControllerMediumEnable()
+    {
+    yield return new WaitForSeconds(controllerMediumEnableTime);
+
+    controller.enabled = true;
+    playerInput.enabled = true;
+    }
+
+    public void ControlMediumDisable()
+    {
+    controller.enabled = false;
+    //avatarAnimator.enabled = false;
+    playerInput.enabled = false;
+
+
+    StartCoroutine(ControllerMediumEnable());
     }
     
     public void ControlLongDisable()

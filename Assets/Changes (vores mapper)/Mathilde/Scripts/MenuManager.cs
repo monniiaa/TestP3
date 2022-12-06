@@ -56,10 +56,12 @@ public class MenuManager : MonoBehaviour
                 break;
             case "scenarie1":
                 DisablePanels();
+                GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].scenario = "Train scene";
                 ChangeScene("Sims Train Scene");
                 break;
             case "scenarie2":
                 DisablePanels();
+                GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].scenario = "House scene";
                 ChangeScene("House scene 1");
                 break;
             default:

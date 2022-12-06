@@ -13,6 +13,7 @@ public class CSVWriter : MonoBehaviour
 
     public class Player
     {
+        public string scenario;
         public string feeling;
         public int feelingAmountBefore, feelingAmountAfter;
         public int FL1, FL2, FL3, FL4;
@@ -46,14 +47,14 @@ public class CSVWriter : MonoBehaviour
         if (myPlayerList.player.Length > 0)
         {
             TextWriter tw = new StreamWriter(filename, false);
-            tw.WriteLine("Feeling", "Amount of feeling before", "amount of feeling after", "FL answers", "AB answers", "PA answers", "ID answers");
+            tw.WriteLine("Scenario", "Feeling", "Amount of feeling before", "amount of feeling after", "FL answers", "AB answers", "PA answers", "ID answers");
             tw.Close();
 
             tw = new StreamWriter(filename, true);
 
             for (int i = 0; i < myPlayerList.player.Length; i++)
             {
-                tw.WriteLine(myPlayerList.player[i].feeling + "," + myPlayerList.player[i].feelingAmountBefore + ","
+                tw.WriteLine(myPlayerList.player[i].scenario + "," + myPlayerList.player[i].feeling + "," + myPlayerList.player[i].feelingAmountBefore + ","
                 + myPlayerList.player[i].feelingAmountAfter + "," + myPlayerList.player[i].FL1 + ","
                 + myPlayerList.player[i].FL2 + "," + myPlayerList.player[i].FL3 + "," + myPlayerList.player[i].FL4 + ","
                 + myPlayerList.player[i].AB1 + "," + myPlayerList.player[i].AB2 + "," + myPlayerList.player[i].AB3 + ","
