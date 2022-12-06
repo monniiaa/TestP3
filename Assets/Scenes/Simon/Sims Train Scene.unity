@@ -13832,7 +13832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &838622107
 Animator:
   serializedVersion: 4
@@ -52586,8 +52586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPanel: {fileID: 1364948919}
-  mobilUI: {fileID: 1332025802}
-  mobilSamtaleTimer: 10
+  mobilUI: {fileID: 838622106}
+  mobilSamtaleTimer: 16
   input: {fileID: 0}
 --- !u!114 &1520805648
 MonoBehaviour:
@@ -54113,7 +54113,7 @@ Animation:
   m_GameObject: {fileID: 1664445490}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 2905924c25b931841b3dcd101f1cdff9, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 2905924c25b931841b3dcd101f1cdff9, type: 2}
   m_WrapMode: 0

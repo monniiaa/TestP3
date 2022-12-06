@@ -199,9 +199,14 @@ public class TrainPanelFirst : MonoBehaviour
             audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[2]);
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feeling = "neutral";
-            startCounter = true;
+            startCounter2 = true;
             Debug.Log("neutral panel + next");
         }
+    }
+
+    public void EndVoiceLine()
+    {
+        audiManager.EnqueueAudioClip(audiolist[5]);
     }
 
     public void AngryAmountPanel()
@@ -209,35 +214,45 @@ public class TrainPanelFirst : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
-            ChangeScene("Train Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 1;
             Debug.Log("angry panel + next");
         }
         else if (angry2Clicked)
         {
             DisablePanels();
-            ChangeScene("Train Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 2;
             Debug.Log("angry panel + next");
         }
         else if (angry3Clicked)
         {
             DisablePanels();
-            ChangeScene("Train Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 3;
             Debug.Log("angry panel + next");
         }
         else if (angry4Clicked)
         {
             DisablePanels();
-            ChangeScene("Train Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 4;
             Debug.Log("angry panel + next");
         }
         else if (angry5Clicked)
         {
             DisablePanels();
-            ChangeScene("Train Scene 2");
+            audiManager.EnqueueAudioClip(audiolist[3]);
+            EndVoiceLine();
+            startCounter = true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 5;
             Debug.Log("angry panel + next");
         }
@@ -248,35 +263,45 @@ public class TrainPanelFirst : MonoBehaviour
         if (worried1Clicked)
             {
                 DisablePanels();
-                ChangeScene("Train Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 1;
                 Debug.Log("worried panel + next");
             }
         else if (worried2Clicked)
             {
                 DisablePanels();
-                ChangeScene("Train Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 2;
                 Debug.Log("worried panel + next");
             }
         else if (worried3Clicked)
             {
                 DisablePanels();
-                ChangeScene("Train Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 3;
                 Debug.Log("worried panel + next");
             }
         else if (worried4Clicked)
             {
                 DisablePanels();
-                ChangeScene("Train Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 4;
                 Debug.Log("worried panel + next");
             }
         else if (worried5Clicked)
             {
                 DisablePanels();
-                ChangeScene("Train Scene 2");
+                audiManager.EnqueueAudioClip(audiolist[4]);
+                EndVoiceLine();
+                startCounter = true;
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountBefore = 5;
                 Debug.Log("worried panel + next");
             }
