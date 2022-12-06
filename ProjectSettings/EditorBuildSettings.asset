@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Changes (vores mapper)/Mathilde/Scenes/BodyCamera.unity
     guid: 60dad56038e644dde9fcb48d8c333fa9
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Changes (vores mapper)/Sofie/CostumAvatar.unity
     guid: 35eed538d830efb4bb3704f8aafae2b7
@@ -29,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenarios (Mikkels pc)/House-Kitchen-Room/Scenes/House scene 2.unity
     guid: 2f6203a2e2796d641a900095a6939c2f
+  - enabled: 1
+    path: Assets/Scenes/Simon/Sims Train Scene.unity
+    guid: 396cf33cc0f6d4b799e462fff00e4c91
+  - enabled: 1
+    path: Assets/Sims Train Scene 2.unity
+    guid: 8d98db3a47706ea4696fa8f8732269bc
+  - enabled: 1
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/EndTrainScene.unity
+    guid: 173de50343bdb495eabb3a760004538b
+  - enabled: 1
+    path: Assets/Changes (vores mapper)/Mathilde/Scenes/EndHouseScene.unity
+    guid: 294a3bd48647d496596b2079675616ab
   m_configObjects: {}

@@ -30,6 +30,8 @@ public class TrainPanelFirst : MonoBehaviour
     public string nextSceneName;
     public string winSceneName;
 
+    public GameObject fadeToBlack;
+
     public void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -313,6 +315,11 @@ public class TrainPanelFirst : MonoBehaviour
         if (startCounter)
         {
             currentTime -= 1 * Time.deltaTime;
+
+            if (currentTime <= 3)
+            {
+                fadeToBlack.SetActive(true);
+            }
 
             if (currentTime <= 0)
             {
