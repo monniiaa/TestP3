@@ -10,6 +10,7 @@ public class AutomaticTimer : MonoBehaviour
     public AudiManagerHouse audioManager;
     public AudioSource audiosource;
     public AudioClip audioclip;
+    public GameObject voiceTriggerBox;
   
     void Start()
     {
@@ -26,8 +27,9 @@ public class AutomaticTimer : MonoBehaviour
 
         if(timeRemaining <= 0)
         {
-        tavleInteractableChecker.SetActive(true);
+            tavleInteractableChecker.SetActive(true);
             audioManager.EnqueueAudioClip(audioclip);
+            voiceTriggerBox.SetActive(true);
             timeStarter = false;
         }
     }

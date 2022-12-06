@@ -32,6 +32,7 @@ public class TrainPanelFirst : MonoBehaviour
 
     public void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         // StartCoroutine(Time());
 
         angry.onClick.AddListener(delegate { CheckFeeling("angry"); });
