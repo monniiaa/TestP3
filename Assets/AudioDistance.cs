@@ -16,7 +16,7 @@ public class AudioDistance : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -25,5 +25,5 @@ public class AudioDistance : MonoBehaviour
                 sound.Stop();
             }
         }
-    } 
+    }*/ 
 }
