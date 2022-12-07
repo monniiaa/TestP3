@@ -30,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Simon/Sims Train Scene.unity
     guid: 396cf33cc0f6d4b799e462fff00e4c91
   - enabled: 1
-    path: Assets/Sims Train Scene 2.unity
-    guid: 8d98db3a47706ea4696fa8f8732269bc
+    path: Assets/Scenes/Simon/Sims Train Scene 1 Second.unity
+    guid: 303dff2c6d4061445b063c27f7143799
   - enabled: 1
     path: Assets/Changes (vores mapper)/Mathilde/Scenes/EndTrainScene.unity
     guid: 173de50343bdb495eabb3a760004538b

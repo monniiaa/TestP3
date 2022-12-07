@@ -15,7 +15,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject OverTheShoulderCam;
     [SerializeField] GameObject skuffeCam;
     [SerializeField] GameObject avatar;
-
+    [SerializeField] GameObject avatarCamera;
+    [SerializeField] Transform avatarCamera2;
+    
 
 
     public float trainCameraSwitchTime;
@@ -74,9 +76,12 @@ public class CameraManager : MonoBehaviour
 
     IEnumerator SvarUIActivator()
     {
-        Debug.Log("Jeg tæller");
         yield return new WaitForSeconds(svarUISwitchTime);
 
+        avatarCamera.SetActive(true);
+        avatar.transform.LookAt(avatarCamera2);
+        avatar.transform.eulerAngles = new Vector3(0,avatar.transform.eulerAngles.y,0);
+        yield return new WaitForSeconds(2);
         svarUI.SetActive(true);
         input.cursorLocked = false;
         input.cursorInputForLook = false;

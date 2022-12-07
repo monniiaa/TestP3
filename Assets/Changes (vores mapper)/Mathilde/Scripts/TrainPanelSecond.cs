@@ -10,8 +10,10 @@ public class TrainPanelSecond : MonoBehaviour
     public GameObject angryPanel;
     public GameObject worriedPanel;
     public GameObject confetti;
+    public GameObject fadeToBlack;
 
     public float confettiTime;
+    public float fadeTime;
 
     public Button angry1, angry2, angry3, angry4, angry5;
     public Button worried1, worried2, worried3, worried4, worried5;
@@ -57,7 +59,7 @@ public class TrainPanelSecond : MonoBehaviour
             worriedPanel.SetActive(true);
         }
     }
-    void Update()
+    /* void Update()
     {
         if (startCounter)
         {
@@ -66,6 +68,7 @@ public class TrainPanelSecond : MonoBehaviour
             if (currentTime <= 1)
             {
                 confetti.SetActive(true);
+                audiManager.EnqueueAudioClip(audioClips[3]);
             }
 
             if (currentTime <= 0)
@@ -75,7 +78,7 @@ public class TrainPanelSecond : MonoBehaviour
                 startCounter = false;
             }
         }
-    }
+    } */
 
     public void DisablePanels()
     {
@@ -254,10 +257,14 @@ public class TrainPanelSecond : MonoBehaviour
     IEnumerator ConfettiSwitch()
     {
         confetti.SetActive(true);
+        audiManager.EnqueueAudioClip(audioClips[2]);
 
         yield return new WaitForSeconds(confettiTime);
+        fadeToBlack.SetActive(true);
+        yield return new WaitForSeconds(fadeTime);
+        SceneManager.LoadScene("EndTrainScene");
 
-        ChangeScene("EndTrainScene");
+        
     }
      
     public void ChangeScene(string sceneName)
