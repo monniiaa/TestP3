@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject avatar;
     [SerializeField] GameObject avatarCamera;
     [SerializeField] Transform avatarCamera2;
-    
+    [SerializeField] Transform roomate;
 
 
     public float trainCameraSwitchTime;
@@ -102,10 +102,13 @@ public class CameraManager : MonoBehaviour
 
     confrontationCam.SetActive(true);
 
-    avatar.transform.Rotate(0, 190, 0, Space.World);
+    
 
     yield return new WaitForSeconds(confrontationTime);
-
+    
+    avatar.transform.LookAt(roomate);
+    avatar.transform.eulerAngles = new Vector3(0,avatar.transform.eulerAngles.y,0);
+    
     OverTheShoulderCam.SetActive(true);
 
     yield return new WaitForSeconds(OverTheShoulderTime);
