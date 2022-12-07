@@ -217,6 +217,7 @@ public class TrainPanelFirst : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[3]);
             EndVoiceLine();
             startCounter = true;
@@ -226,6 +227,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (angry2Clicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[3]);
             EndVoiceLine();
             startCounter = true;
@@ -235,6 +237,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (angry3Clicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[3]);
             EndVoiceLine();
             startCounter = true;
@@ -244,6 +247,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (angry4Clicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[3]);
             EndVoiceLine();
             startCounter = true;
@@ -253,6 +257,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (angry5Clicked)
         {
             DisablePanels();
+            audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[3]);
             EndVoiceLine();
             startCounter = true;
@@ -266,6 +271,7 @@ public class TrainPanelFirst : MonoBehaviour
         if (worried1Clicked)
             {
                 DisablePanels();
+                audiManager.audioPlayer.Stop();
                 audiManager.EnqueueAudioClip(audiolist[4]);
                 EndVoiceLine();
                 startCounter = true;
@@ -275,6 +281,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (worried2Clicked)
             {
                 DisablePanels();
+                audiManager.audioPlayer.Stop();
                 audiManager.EnqueueAudioClip(audiolist[4]);
                 EndVoiceLine();
                 startCounter = true;
@@ -284,6 +291,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (worried3Clicked)
             {
                 DisablePanels();
+                audiManager.audioPlayer.Stop();
                 audiManager.EnqueueAudioClip(audiolist[4]);
                 EndVoiceLine();
                 startCounter = true;
@@ -293,6 +301,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (worried4Clicked)
             {
                 DisablePanels();
+                audiManager.audioPlayer.Stop();
                 audiManager.EnqueueAudioClip(audiolist[4]);
                 EndVoiceLine();
                 startCounter = true;
@@ -302,6 +311,7 @@ public class TrainPanelFirst : MonoBehaviour
         else if (worried5Clicked)
             {
                 DisablePanels();
+                audiManager.audioPlayer.Stop();
                 audiManager.EnqueueAudioClip(audiolist[4]);
                 EndVoiceLine();
                 startCounter = true;
