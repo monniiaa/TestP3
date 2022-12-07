@@ -12,8 +12,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject svarUI;
     [SerializeField] GameObject vaskCam;
     [SerializeField] GameObject confrontationCam;
+    [SerializeField] GameObject OverTheShoulderCam;
     [SerializeField] GameObject skuffeCam;
-    
+    [SerializeField] GameObject avatar;
 
 
 
@@ -24,6 +25,7 @@ public class CameraManager : MonoBehaviour
 
     public float vaskTime;
     public float confrontationTime;
+    public float OverTheShoulderTime;
     public float skuffeCamTime;
 
 
@@ -95,7 +97,13 @@ public class CameraManager : MonoBehaviour
 
     confrontationCam.SetActive(true);
 
+    avatar.transform.Rotate(0, 190, 0, Space.World);
+
     yield return new WaitForSeconds(confrontationTime);
+
+    OverTheShoulderCam.SetActive(true);
+
+    yield return new WaitForSeconds(OverTheShoulderTime);
 
     svarUI.SetActive(true);
 
