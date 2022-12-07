@@ -63353,6 +63353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobilUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2158066391698070662, guid: 620aba6b62cc563488e6ad3e37d9dd52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 620aba6b62cc563488e6ad3e37d9dd52, type: 3}
 --- !u!1001 &3204930086008111738
