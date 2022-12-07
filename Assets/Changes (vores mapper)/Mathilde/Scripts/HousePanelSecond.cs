@@ -8,8 +8,11 @@ public class HousePanelSecond : MonoBehaviour
 {
     public GameObject angryPanel;
     public GameObject worriedPanel;
+    public GameObject confetti;
+
     public bool startCounter;
     public float currentTime;
+    public float confettiTime;
 
     public Button angry1, angry2, angry3, angry4, angry5;
     public Button worried1, worried2, worried3, worried4, worried5;
@@ -152,35 +155,35 @@ public class HousePanelSecond : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
             Debug.Log("angry panel + next");
         }
         else if (angry2Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
             Debug.Log("angry panel + next");
         }
         else if (angry3Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
             Debug.Log("angry panel + next");
         }
         else if (angry4Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
             Debug.Log("angry panel + next");
         }
         else if (angry5Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
             Debug.Log("angry panel + next");
         }
@@ -191,55 +194,52 @@ public class HousePanelSecond : MonoBehaviour
         if (worried1Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
             Debug.Log("worried panel + next");
         }
         else if (worried2Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
             Debug.Log("worried panel + next");
         }
         else if (worried3Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
             Debug.Log("worried panel + next");
         }
         else if (worried4Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
             Debug.Log("worried panel + next");
         }
         else if (worried5Clicked)
         {
             DisablePanels();
-            ChangeScene(nextSceneName);
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
             Debug.Log("worried panel + next");
         }
     }
-    void Update()
-    {
-        if (startCounter)
-        {
-            currentTime -= 1 * Time.deltaTime;
 
-            if (currentTime <= 0)
-            {
-                currentTime = 0;
-                ChangeScene(nextSceneName);
-                startCounter = false;
-            }
+    IEnumerator ConfettiSwitch()
+    {
+        confetti.SetActive(true);
+
+        yield return new WaitForSeconds(confettiTime);
+
+        ChangeScene(nextSceneName);
+    }
+
+    public void ChangeScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
         }
     }
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-}
+
