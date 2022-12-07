@@ -19,6 +19,14 @@ public class TrainPanelSecond : MonoBehaviour
     public bool angry1Clicked, angry2Clicked, angry3Clicked, angry4Clicked, angry5Clicked;
     public bool worried1Clicked, worried2Clicked, worried3Clicked, worried4Clicked, worried5Clicked;
 
+    public AudioClip[] audioClips;
+    public float timer;
+    public string nextSceneName;
+    public AudiManagerHouse audiManager;
+
+    public bool startCounter;
+    public float currentTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,15 +47,34 @@ public class TrainPanelSecond : MonoBehaviour
         if (GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feeling == "angry")
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[0]);
             angryPanel.SetActive(true);
         }
         else if (GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feeling == "worried")
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[1]);
             worriedPanel.SetActive(true);
         }
+    }
+    void Update()
+    {
+        if (startCounter)
+        {
+            currentTime -= 1 * Time.deltaTime;
 
+            if (currentTime <= 1)
+            {
+                confetti.SetActive(true);
+            }
 
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                ChangeScene(nextSceneName);
+                startCounter = false;
+            }
+        }
     }
 
     public void DisablePanels()
@@ -232,7 +259,7 @@ public class TrainPanelSecond : MonoBehaviour
 
         ChangeScene("EndTrainScene");
     }
-
+     
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
