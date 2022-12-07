@@ -231,10 +231,10 @@ public class HousePanelSecond : MonoBehaviour
     IEnumerator ConfettiSwitch()
     {
         confetti.SetActive(true);
-
+        audiManager.EnqueueAudioClip(audioClips[2]);
         yield return new WaitForSeconds(confettiTime);
 
-        ChangeScene(nextSceneName);
+        SceneManager.LoadScene(nextSceneName);
     }
 
     public void ChangeScene(string sceneName)
