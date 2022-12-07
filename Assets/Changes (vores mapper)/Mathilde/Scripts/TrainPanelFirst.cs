@@ -343,6 +343,11 @@ public class TrainPanelFirst : MonoBehaviour
         {
             currentTime -= 1 * Time.deltaTime;
 
+            if (currentTime <= 3)
+            {
+                fadeToBlack.SetActive(true);
+            }
+
             if (currentTime <= 0)
             {
                 currentTime = 0;

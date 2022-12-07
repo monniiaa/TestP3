@@ -9,12 +9,11 @@ using UnityEngine.InputSystem;
 
 public class HousePanelFirst : MonoBehaviour
 {
-    public bool startCounter;
-    public float currentTime;
     public GameObject choosePanel;
     public GameObject angryPanel;
     public GameObject worriedPanel;
     public StarterAssetsInputs input;
+    public GameObject fadeToBlack;
 
     public Button angry, worried, neutral;
     public Button angry1, angry2, angry3, angry4, angry5;
@@ -26,9 +25,13 @@ public class HousePanelFirst : MonoBehaviour
 
     public AudiManagerHouse audiManager;
     public List<AudioClip> audiolist;
+
+    public bool startCounter;
+    public bool startCounter2;
+    public float currentTime;
+    public float currentTime2;
     public string nextSceneName;
     public string winSceneName;
-
 
     public void Start()
     {
@@ -317,10 +320,32 @@ public class HousePanelFirst : MonoBehaviour
         {
             currentTime -= 1 * Time.deltaTime;
 
+            if (currentTime <= 3)
+            {
+                fadeToBlack.SetActive(true);
+            }
+
             if (currentTime <= 0)
             {
                 currentTime = 0;
                 ChangeScene(nextSceneName);
+                startCounter = false;
+            }
+        }
+
+        if (startCounter2)
+        {
+            currentTime -= 1 * Time.deltaTime;
+
+            if (currentTime <= 3)
+            {
+                fadeToBlack.SetActive(true);
+            }
+
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                ChangeScene(winSceneName);
                 startCounter = false;
             }
         }

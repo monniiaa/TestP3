@@ -15,8 +15,8 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject OverTheShoulderCam;
     [SerializeField] GameObject skuffeCam;
     [SerializeField] GameObject avatar;
-
-
+    [SerializeField] GameObject feelingsCam;
+    [SerializeField] Transform roommate;
 
     public float trainCameraSwitchTime;
     public float posterCameraSwitchTime;
@@ -76,7 +76,7 @@ public class CameraManager : MonoBehaviour
     {
         Debug.Log("Jeg tæller");
         yield return new WaitForSeconds(svarUISwitchTime);
-
+        feelingsCam.SetActive(true);
         svarUI.SetActive(true);
         input.cursorLocked = false;
         input.cursorInputForLook = false;
@@ -93,19 +93,19 @@ public class CameraManager : MonoBehaviour
 
     IEnumerator Confrontation()
     {
-    yield return new WaitForSeconds(vaskTime);
+        yield return new WaitForSeconds(vaskTime);
 
-    confrontationCam.SetActive(true);
+        confrontationCam.SetActive(true);
 
-    avatar.transform.Rotate(0, 190, 0, Space.World);
+        avatar.transform.LookAt(roommate);
 
-    yield return new WaitForSeconds(confrontationTime);
+        yield return new WaitForSeconds(confrontationTime);
 
-    OverTheShoulderCam.SetActive(true);
+        OverTheShoulderCam.SetActive(true);
 
-    yield return new WaitForSeconds(OverTheShoulderTime);
+        yield return new WaitForSeconds(OverTheShoulderTime);
 
-    svarUI.SetActive(true);
+        svarUI.SetActive(true);
 
     }
 
