@@ -12,6 +12,8 @@ TagManager:
   - PickableObject
   - NPC
   - Roommate
+  - Pathpoint
+  - MultiPathpoint
   layers:
   - Default
   - TransparentFX
