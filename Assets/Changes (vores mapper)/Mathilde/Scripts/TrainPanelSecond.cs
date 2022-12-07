@@ -9,6 +9,9 @@ public class TrainPanelSecond : MonoBehaviour
 
     public GameObject angryPanel;
     public GameObject worriedPanel;
+    public GameObject confetti;
+
+    public float confettiTime;
 
     public Button angry1, angry2, angry3, angry4, angry5;
     public Button worried1, worried2, worried3, worried4, worried5;
@@ -19,6 +22,8 @@ public class TrainPanelSecond : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         angry1.onClick.AddListener(delegate { CheckAngryAmount(1); });
         angry2.onClick.AddListener(delegate { CheckAngryAmount(2); });
         angry3.onClick.AddListener(delegate { CheckAngryAmount(3); });
@@ -41,6 +46,8 @@ public class TrainPanelSecond : MonoBehaviour
             DisablePanels();
             worriedPanel.SetActive(true);
         }
+
+
     }
 
     public void DisablePanels()
@@ -144,35 +151,35 @@ public class TrainPanelSecond : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 1;
             Debug.Log("angry panel + next");
         }
         else if (angry2Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 2;
             Debug.Log("angry panel + next");
         }
         else if (angry3Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 3;
             Debug.Log("angry panel + next");
         }
         else if (angry4Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 4;
             Debug.Log("angry panel + next");
         }
         else if (angry5Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 5;
             Debug.Log("angry panel + next");
         }
@@ -183,38 +190,47 @@ public class TrainPanelSecond : MonoBehaviour
         if (worried1Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 1;
             Debug.Log("worried panel + next");
         }
         else if (worried2Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 2;
             Debug.Log("worried panel + next");
         }
         else if (worried3Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 3;
             Debug.Log("worried panel + next");
         }
         else if (worried4Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 4;
             Debug.Log("worried panel + next");
         }
         else if (worried5Clicked)
         {
             DisablePanels();
-            ChangeScene("EndTrainScene");
+            StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 5;
             Debug.Log("worried panel + next");
         }
+    }
+
+    IEnumerator ConfettiSwitch()
+    {
+        confetti.SetActive(true);
+
+        yield return new WaitForSeconds(confettiTime);
+
+        ChangeScene("EndTrainScene");
     }
 
     public void ChangeScene(string sceneName)

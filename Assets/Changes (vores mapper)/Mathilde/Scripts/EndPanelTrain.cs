@@ -59,14 +59,14 @@ public class EndPanelTrain : MonoBehaviour
         ab41.onClick.AddListener(delegate { CheckAB4Amount(1); }); ab42.onClick.AddListener(delegate { CheckAB4Amount(2); }); ab43.onClick.AddListener(delegate { CheckAB4Amount(3); });
         ab44.onClick.AddListener(delegate { CheckAB4Amount(4); }); ab45.onClick.AddListener(delegate { CheckAB4Amount(5); });
 
-        pa11.onClick.AddListener(delegate { CheckPA1Amount(1); }); pa12.onClick.AddListener(delegate { CheckAB1Amount(2); }); pa13.onClick.AddListener(delegate { CheckPA1Amount(3); });
+        pa11.onClick.AddListener(delegate { CheckPA1Amount(1); }); pa12.onClick.AddListener(delegate { CheckPA1Amount(2); }); pa13.onClick.AddListener(delegate { CheckPA1Amount(3); });
         pa14.onClick.AddListener(delegate { CheckPA1Amount(4); }); pa15.onClick.AddListener(delegate { CheckPA1Amount(5); });
         pa21.onClick.AddListener(delegate { CheckPA2Amount(1); }); pa22.onClick.AddListener(delegate { CheckPA2Amount(2); }); pa23.onClick.AddListener(delegate { CheckPA2Amount(3); });
         pa24.onClick.AddListener(delegate { CheckPA2Amount(4); }); pa25.onClick.AddListener(delegate { CheckPA2Amount(5); });
 
         id11.onClick.AddListener(delegate { CheckID1Amount(1); }); id12.onClick.AddListener(delegate { CheckID1Amount(2); }); id13.onClick.AddListener(delegate { CheckID1Amount(3); });
         id14.onClick.AddListener(delegate { CheckID1Amount(4); }); id15.onClick.AddListener(delegate { CheckID1Amount(5); });
-        id21.onClick.AddListener(delegate { CheckID2Amount(1); }); id22.onClick.AddListener(delegate { CheckID2Amount(2); }); id23.onClick.AddListener(delegate { CheckFL1Amount(3); });
+        id21.onClick.AddListener(delegate { CheckID2Amount(1); }); id22.onClick.AddListener(delegate { CheckID2Amount(2); }); id23.onClick.AddListener(delegate { CheckID2Amount(3); });
         id24.onClick.AddListener(delegate { CheckID2Amount(4); }); id25.onClick.AddListener(delegate { CheckID2Amount(5); });
         id31.onClick.AddListener(delegate { CheckID3Amount(1); }); id32.onClick.AddListener(delegate { CheckID3Amount(2); }); id33.onClick.AddListener(delegate { CheckID3Amount(3); });
         id34.onClick.AddListener(delegate { CheckID3Amount(4); }); id35.onClick.AddListener(delegate { CheckID3Amount(5); });
