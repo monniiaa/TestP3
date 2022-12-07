@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutSceneAnimator : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CutSceneAnimator : MonoBehaviour
 
     [SerializeField]
     private int time;
+    public float asteroidTime;
 
 
 
@@ -26,6 +28,7 @@ public class CutSceneAnimator : MonoBehaviour
     {
         endCam.gameObject.SetActive(true);
         cameraOne.gameObject.SetActive(false);
+        StartCoroutine(AsteroidsStarter());
     }
 
 
@@ -35,4 +38,11 @@ public class CutSceneAnimator : MonoBehaviour
         ChangeCamera(initialcam, endCam);
     }
 
+
+    IEnumerator AsteroidsStarter()
+    {
+    yield return new WaitForSeconds(asteroidTime);
+
+    SceneManager.LoadScene("Asteroids");
+    }
 }
