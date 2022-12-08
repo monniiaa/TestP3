@@ -7,6 +7,7 @@ using StarterAssets;
 
 public class TrainPanelFirst : MonoBehaviour
 {
+        public GameObject confetti;
     public GameObject choosePanel;
     public GameObject angryPanel;
     public GameObject worriedPanel;
@@ -31,6 +32,7 @@ public class TrainPanelFirst : MonoBehaviour
     public string winSceneName;
 
     public GameObject fadeToBlack;
+    bool confettiActivator = false;
 
     public void Start()
     {
@@ -201,6 +203,8 @@ public class TrainPanelFirst : MonoBehaviour
             DisablePanels();
             audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[2]);
+            audiManager.EnqueueAudioClip(audiolist[6]);
+            startCounter2=true;
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feeling = "neutral";
             startCounter2 = true;
             Debug.Log("neutral panel + next");
@@ -339,15 +343,21 @@ public class TrainPanelFirst : MonoBehaviour
             }
         }
 
-        if (startCounter2)
+          if (startCounter2)
         {
-            currentTime -= 1 * Time.deltaTime;
-
-            if (currentTime <= 0)
+            currentTime2 -= 1 * Time.deltaTime;
+            if(currentTime2 <= 4 && confettiActivator == false)
             {
-                currentTime = 0;
+                confetti.SetActive(true);
+                audiManager.EnqueueAudioClip(audiolist[7]);
+                confettiActivator = true;
+            }
+
+            if (currentTime2 <= 0)
+            {
+                currentTime2 = 0;
                 ChangeScene(winSceneName);
-                startCounter = false;
+                startCounter2 = false;
             }
         }
     }

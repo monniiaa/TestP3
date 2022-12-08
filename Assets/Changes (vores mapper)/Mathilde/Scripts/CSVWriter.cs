@@ -39,7 +39,7 @@ public class CSVWriter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filename = Application.dataPath + "/test.csv";
+        filename = Application.dataPath + "/answer3.csv";
     }
 
     public void WriteCSV()
@@ -47,19 +47,19 @@ public class CSVWriter : MonoBehaviour
         if (myPlayerList.player.Length > 0)
         {
             TextWriter tw = new StreamWriter(filename, false);
-            tw.WriteLine("Scenario", "Feeling", "Amount of feeling before", "amount of feeling after", "FL answers", "AB answers", "PA answers", "ID answers");
+            tw.WriteLine("Scenario" + ";" + "Feeling"+ ";" +"Amount of feeling before" + ";" + "amount of feeling after"+ ";" + "FL answers"+ ";"+ "AB answers" + ";" + "PA answers" +  ";" +"ID answers");
             tw.Close();
 
             tw = new StreamWriter(filename, true);
 
             for (int i = 0; i < myPlayerList.player.Length; i++)
             {
-                tw.WriteLine(myPlayerList.player[i].scenario + "," + myPlayerList.player[i].feeling + "," + myPlayerList.player[i].feelingAmountBefore + ","
-                + myPlayerList.player[i].feelingAmountAfter + "," + myPlayerList.player[i].FL1 + ","
-                + myPlayerList.player[i].FL2 + "," + myPlayerList.player[i].FL3 + "," + myPlayerList.player[i].FL4 + ","
-                + myPlayerList.player[i].AB1 + "," + myPlayerList.player[i].AB2 + "," + myPlayerList.player[i].AB3 + ","
-                + myPlayerList.player[i].AB4 + "," + myPlayerList.player[i].PA1 + "," + myPlayerList.player[i].PA2 + ","
-                + myPlayerList.player[i].ID1 + "," + myPlayerList.player[i].ID2 + "," + myPlayerList.player[i].ID3);
+                tw.WriteLine(myPlayerList.player[i].scenario + ";" + myPlayerList.player[i].feeling + ";" + myPlayerList.player[i].feelingAmountBefore + ","
+                + myPlayerList.player[i].feelingAmountAfter + ";" + myPlayerList.player[i].FL1 + ";"
+                + myPlayerList.player[i].FL2 + ";" + myPlayerList.player[i].FL3 + ";" + myPlayerList.player[i].FL4 + ","
+                + myPlayerList.player[i].AB1 + ";" + myPlayerList.player[i].AB2 + ";" + myPlayerList.player[i].AB3 + ";"
+                + myPlayerList.player[i].AB4 + ";" + myPlayerList.player[i].PA1 + ";" + myPlayerList.player[i].PA2 + ";"
+                + myPlayerList.player[i].ID1 + ";" + myPlayerList.player[i].ID2 + ";" + myPlayerList.player[i].ID3);
             }
             tw.Close();
         }
