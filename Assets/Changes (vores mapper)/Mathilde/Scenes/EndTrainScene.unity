@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1565,6 +1565,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 305912700}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FindCSV
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EndPanelTrain, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2876325742141945259, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1765,6 +1793,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -926
       objectReference: {fileID: 0}
+    - target: {fileID: 4081481655071635140, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_text
+      value: De problemer jeg oplever er de samme problemer min karakter oplever
+      objectReference: {fileID: 0}
     - target: {fileID: 5534357128114122745, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1820,6 +1852,11 @@ PrefabInstance:
     - target: {fileID: 7739357605356575887, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945448550240975636, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_text
+      value: "Da min karakter blev behandlet uretf\xE6rdig i spillet, f\xF8lte jeg
+        mig vred"
       objectReference: {fileID: 0}
     - target: {fileID: 8329608656354249560, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_RootOrder

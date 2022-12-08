@@ -28,6 +28,8 @@ public class HousePanelSecond : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         angry1.onClick.AddListener(delegate { CheckAngryAmount(1); });
         angry2.onClick.AddListener(delegate { CheckAngryAmount(2); });
         angry3.onClick.AddListener(delegate { CheckAngryAmount(3); });

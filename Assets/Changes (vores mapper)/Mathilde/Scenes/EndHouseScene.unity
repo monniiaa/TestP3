@@ -939,6 +939,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1052027772}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FindCSV
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EndPanelHouse, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876325741414761985, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2876325741928715457, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -137
@@ -1112,6 +1140,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
+--- !u!114 &1052027772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1178317653251650644, guid: 76ca9115175fa49a7815187566a36cc1, type: 3}
+  m_PrefabInstance: {fileID: 1052027769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c73a2d5714134e57ba3c24443baaea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087211468
 GameObject:
   m_ObjectHideFlags: 0

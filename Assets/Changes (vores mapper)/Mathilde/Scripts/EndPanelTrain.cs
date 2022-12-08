@@ -1309,6 +1309,11 @@ public class EndPanelTrain : MonoBehaviour
         ChangeScene("MainMenu");
     }
 
+ public void FindCSV()
+    {
+        GameObject.Find("CSVWriter").GetComponent<CSVWriter>().WriteCSV();
+    }
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

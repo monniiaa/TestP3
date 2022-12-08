@@ -452,7 +452,7 @@ namespace Sunbox.Avatars {
         /// Updates and invalidates clothing items on avatar.
         /// </summary>
         public void UpdateClothing() {
-            //UpdateClothing_Internal();
+            UpdateClothing_Internal();
         }
 
         /// <summary>
