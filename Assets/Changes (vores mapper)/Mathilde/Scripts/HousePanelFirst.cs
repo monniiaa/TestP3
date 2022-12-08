@@ -10,7 +10,10 @@ using UnityEngine.InputSystem;
 public class HousePanelFirst : MonoBehaviour
 {
     public bool startCounter;
+    public bool startCounter2;
     public float currentTime;
+    public float currentTime2;
+    public GameObject confetti;
     public GameObject choosePanel;
     public GameObject angryPanel;
     public GameObject worriedPanel;
@@ -23,6 +26,7 @@ public class HousePanelFirst : MonoBehaviour
     public bool angryClicked, worriedClicked, neutralClicked;
     public bool angry1Clicked, angry2Clicked, angry3Clicked, angry4Clicked, angry5Clicked;
     public bool worried1Clicked, worried2Clicked, worried3Clicked, worried4Clicked, worried5Clicked;
+    public bool confettiActivator = false; 
 
     public AudiManagerHouse audiManager;
     public List<AudioClip> audiolist;
@@ -201,6 +205,8 @@ public class HousePanelFirst : MonoBehaviour
             DisablePanels();
             audiManager.audioPlayer.Stop();
             audiManager.EnqueueAudioClip(audiolist[2]);
+            audiManager.EnqueueAudioClip(audiolist[7]);
+            startCounter2 = true; 
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feeling = "neutral";
             //ChangeScene();
             Debug.Log("neutral panel + next");
@@ -309,7 +315,7 @@ public class HousePanelFirst : MonoBehaviour
                 GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountBefore = 5;
                 Debug.Log("worried panel + next");
             }
-    }
+    }   
 
     void Update()
     {
@@ -322,6 +328,23 @@ public class HousePanelFirst : MonoBehaviour
                 currentTime = 0;
                 ChangeScene(nextSceneName);
                 startCounter = false;
+            }
+        }
+    if (startCounter2)
+        {
+            currentTime2 -= 1 * Time.deltaTime;
+            if(currentTime2 <= 4 && confettiActivator == false)
+            {
+                confetti.SetActive(true);
+                audiManager.EnqueueAudioClip(audiolist[6]);
+                confettiActivator = true;
+            }
+
+            if (currentTime2 <= 0)
+            {
+                currentTime2 = 0;
+                ChangeScene(winSceneName);
+                startCounter2 = false;
             }
         }
     }

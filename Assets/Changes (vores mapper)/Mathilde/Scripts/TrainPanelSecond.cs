@@ -181,6 +181,7 @@ public class TrainPanelSecond : MonoBehaviour
         if (angry1Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 1;
             Debug.Log("angry panel + next");
@@ -188,6 +189,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (angry2Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 2;
             Debug.Log("angry panel + next");
@@ -195,6 +197,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (angry3Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 3;
             Debug.Log("angry panel + next");
@@ -202,6 +205,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (angry4Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 4;
             Debug.Log("angry panel + next");
@@ -209,6 +213,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (angry5Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 5;
             Debug.Log("angry panel + next");
@@ -220,6 +225,7 @@ public class TrainPanelSecond : MonoBehaviour
         if (worried1Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 1;
             Debug.Log("worried panel + next");
@@ -227,6 +233,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (worried2Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 2;
             Debug.Log("worried panel + next");
@@ -234,6 +241,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (worried3Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 3;
             Debug.Log("worried panel + next");
@@ -241,6 +249,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (worried4Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 4;
             Debug.Log("worried panel + next");
@@ -248,6 +257,7 @@ public class TrainPanelSecond : MonoBehaviour
         else if (worried5Clicked)
         {
             DisablePanels();
+            audiManager.EnqueueAudioClip(audioClips[3]);
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[0].feelingAmountAfter = 5;
             Debug.Log("worried panel + next");

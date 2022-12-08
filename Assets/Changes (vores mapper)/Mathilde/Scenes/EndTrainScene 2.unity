@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 485882123715947149, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339587077389050343, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2876325741012143714, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_PreserveAspect
@@ -302,9 +306,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3250712641334767136, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597080425211211323, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3760884098032971862, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814469716121162833, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081481655071635140, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_text
+      value: De problemer jeg oplever er de samme problemer min karakter oplever
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739357605356575887, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945448550240975636, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_text
+      value: "Da min karakter blev behandlet uretf\xE6rdig i spillet, f\xF8lte jeg
+        mig vred"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8329608656354249560, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59c702ccb9e104a539d1bed55f60e976, type: 3}

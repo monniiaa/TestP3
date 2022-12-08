@@ -154,6 +154,7 @@ public class HousePanelSecond : MonoBehaviour
     {
         if (angry1Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
@@ -161,6 +162,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (angry2Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
@@ -168,6 +170,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (angry3Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
@@ -175,6 +178,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (angry4Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
@@ -182,6 +186,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (angry5Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
@@ -193,6 +198,7 @@ public class HousePanelSecond : MonoBehaviour
     {
         if (worried1Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 1;
@@ -200,6 +206,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (worried2Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 2;
@@ -207,6 +214,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (worried3Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 3;
@@ -214,6 +222,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (worried4Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 4;
@@ -221,6 +230,7 @@ public class HousePanelSecond : MonoBehaviour
         }
         else if (worried5Clicked)
         {
+            audiManager.EnqueueAudioClip(audioClips[3]);
             DisablePanels();
             StartCoroutine(ConfettiSwitch());
             GameObject.Find("CSVWriter").GetComponent<CSVWriter>().myPlayerList.player[1].feelingAmountAfter = 5;
