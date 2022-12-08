@@ -10,6 +10,7 @@ public class EndPanelHouse : MonoBehaviour
     public GameObject abPanel;
     public GameObject paPanel;
     public GameObject idPanel;
+    public GameObject csvWriter;
 
     public Button fl11, fl12, fl13, fl14, fl15;
     public Button fl21, fl22, fl23, fl24, fl25;
@@ -1330,7 +1331,12 @@ public class EndPanelHouse : MonoBehaviour
         }
 
         DisablePanels();
-        ChangeScene("MainMenu");
+        // ChangeScene("MainMenu");
+    }
+
+    public void FindCSV()
+    {
+        GameObject.Find("CSVWriter").GetComponent<CSVWriter>().WriteCSV();
     }
 
     public void ChangeScene(string sceneName)
