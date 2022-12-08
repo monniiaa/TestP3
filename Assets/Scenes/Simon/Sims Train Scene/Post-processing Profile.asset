@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   lift:
     m_OverrideState: 1
     m_Value: {x: 0.9839933, y: 0.98799497, z: 1, w: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.432
+    m_Value: 0.4
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
@@ -155,7 +155,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -0.2
+    m_Value: -0.4
   contrast:
     m_OverrideState: 1
     m_Value: 15
@@ -183,13 +183,13 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5
   intensity:
     m_OverrideState: 1
     m_Value: 1
   scatter:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.3
   clamp:
     m_OverrideState: 0
     m_Value: 65472
