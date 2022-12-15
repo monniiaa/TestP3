@@ -1,4 +1,5 @@
 #Import Libraries
+#inspired by Educative
 import os,argparse,uuid
 import mediapipe,cv2,filetype
 import numpy as np

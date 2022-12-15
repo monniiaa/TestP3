@@ -1,5 +1,6 @@
 
 #Import Libraries
+#Inspired by Educative
 import os,argparse,uuid,math
 import mediapipe,cv2,filetype
 import numpy as np
@@ -12,9 +13,7 @@ from collections import Counter
 MIN_CONFIDENCE_LEVEL = 0.5
 
 def initialize_mediapipe():
-    """
-    Initializing mediapipe sub-modules
-    """
+
     #Enable the face detection sub-module
     mpFaceDetection = mediapipe.solutions.face_detection.FaceDetection(MIN_CONFIDENCE_LEVEL)
 
